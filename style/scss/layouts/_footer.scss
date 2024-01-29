@@ -14,33 +14,38 @@
     grid-auto-flow: row;
     align-items: center;
     grid-template-areas:
-        "footer_top"
-        "footer_bottom";
+      "footer_top"
+      "footer_bottom";
 
     .footer_top {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto;
-        gap: 0px 20px!important;
-        grid-template-areas: "logo_footer menu_footer";
-        justify-self: stretch;
-        align-self: stretch;
-        grid-area: footer_top;
-        
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto;
+      gap: 0px 20px !important;
+      grid-template-areas: "logo_footer menu_footer";
+      justify-self: stretch;
+      align-self: stretch;
+      grid-area: footer_top;
 
-        .logo_footer {
-            grid-area: logo_footer;
-        }
+      .logo_footer {
+        grid-area: logo_footer;
+      }
 
-        .menu_footer {
-            grid-area: menu_footer;
-            align-self: center;
-        }
+      .menu_footer {
+        grid-area: menu_footer;
+        align-self: center;
+      }
     }
 
     .footer_bottom {
-        align-self: stretch;
-        grid-area: footer_bottom;
+      align-self: stretch;
+      grid-area: footer_bottom;
     }
-}
+  }
+  .container {
+    margin-top: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }

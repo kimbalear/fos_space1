@@ -104,9 +104,13 @@ a.hover {
 table {
   margin-top: 20px;
 }
-// todo
+
 .custom-select {
   border-color: $primary;
+}
+// todo
+.custom-select.singleselect {
+  color: $primary;
 }
 
 .input-group-append {
@@ -226,7 +230,7 @@ body {
 }
 
 .btn-link {
-  color: $FOS-Caribbean-Green;
+  color: $FOS-Caribbean-Green!important;
   text-decoration: none;
 
   .icon {
@@ -237,22 +241,19 @@ body {
 .bnt-custom-exp {
   margin-bottom: 20px !important;
 }
-.btn-link {
-  color: $FOS-Coral!important;
-}
 
 .navbar-brand .logo {
-  display: none;  // Esto oculta el logo actual
+  display: none; // Esto oculta el logo actual
 }
 
 .navbar-brand::after {
-  content: '';
+  content: "";
   display: block;
   //http://foselearning.knowtechture.com
   //http://localhost
-  background-image: url('http://foselearning.knowtechture.com/theme/ddmood/pix/FOSlogo.png')!important;
+  background-image: url("http://localhost/theme/ddmood/pix/FOSlogo.png") !important;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 44px;  // Ajusta al tamaño de tu logo
+  width: 44px; // Ajusta al tamaño de tu logo
   height: 31px; // Ajusta al tamaño de tu logo
 }

@@ -144,6 +144,12 @@ h5 {
   align-self: stretch;
   grid-area: footer_bottom;
 }
+.ddmood-footer .container {
+  margin-top: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
 
 .navbar.fixed-top {
   padding-top: 0;
@@ -203,7 +209,7 @@ h5 {
   word-wrap: break-word;
   background-color: #f3eff5;
   background-clip: border-box;
-  border: 0.5px solid #f3eff5;
+  border: 0.5px solid #f3eff5 !important;
 }
 .card > hr {
   margin-right: 0;
@@ -4444,6 +4450,10 @@ table {
   border-color: #5c3873;
 }
 
+.custom-select.singleselect {
+  color: #5c3873;
+}
+
 .input-group-append .btn-submit {
   border: 1px solid #5c3873;
 }
@@ -4545,7 +4555,7 @@ body #page-wrapper #page #region-main {
 }
 
 .btn-link {
-  color: #60ad8f;
+  color: #60ad8f !important;
   text-decoration: none;
 }
 .btn-link .icon {
@@ -4556,10 +4566,6 @@ body #page-wrapper #page #region-main {
   margin-bottom: 20px !important;
 }
 
-.btn-link {
-  color: #f06043 !important;
-}
-
 .navbar-brand .logo {
   display: none;
 }
@@ -4567,7 +4573,7 @@ body #page-wrapper #page #region-main {
 .navbar-brand::after {
   content: "";
   display: block;
-  background-image: url("http://foselearning.knowtechture.com/theme/ddmood/pix/FOSlogo.png") !important;
+  background-image: url("http://localhost/theme/ddmood/pix/FOSlogo.png") !important;
   background-size: contain;
   background-repeat: no-repeat;
   width: 44px;

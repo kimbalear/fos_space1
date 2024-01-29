@@ -15,7 +15,7 @@ $card-cap-bg: $body-bg;
     word-wrap: break-word;
     background-color: $card-bg;
     background-clip: border-box;
-    border: $card-border-width solid $card-border-color;
+    border: $card-border-width solid $card-border-color!important;
   
     > hr {
       margin-right: 0;
