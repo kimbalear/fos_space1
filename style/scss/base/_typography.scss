@@ -36,17 +36,17 @@ h2 {
 }
 
 h3 {
-  @include font-header-Sans_Black('Isidora Sans Black');
+  @include font-header-Sans_Black('Isidora Sans Medium');
   color: $FOS-Aubergine!important;
 }
 
 h4{
-  @include font-header-Sans_Black('Isidora Sans Black');
+  @include font-header-Sans_Black('Isidora Sans Medium');
   color: $FOS-Aubergine!important;
 }
 
 
 h5 {
-  @include font-header-Sans_Black('Isidora Sans Black');
+  @include font-header-Sans_Black('Isidora Sans Medium');
   color: $FOS-Aubergine!important;
 }
