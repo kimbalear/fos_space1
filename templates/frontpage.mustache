@@ -83,19 +83,8 @@ Example context (json):
             {{/hasblocks}}
             <div id="page" data-region="mainpage" data-usertour="scroller"
                 class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
-                        <div id="topofscroll" class="main-inner ktt_wrapper">
-                            <div class="drawer-toggles d-flex ktt_wrapper">
-                            <!--
-                                {{#categories}}
-                                    <div class="category-item">
-                                        <h3 class="category-name">{{name}}</h3>
-                                        <p class="category-description">{{description}}</p>
-                                        <a href="{{url}}" class="btn btn-primary">Explorar esta categoría</a>
-                                    </div>
-                                {{/categories}}
-
-                                <div
--->
+                        <div id="topofscroll" class="main-inner custom-inner">
+                            <div class="drawer-toggles d-flex">
                                 {{#hasblocks}}
                                 <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
                                     <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle"
@@ -132,7 +121,7 @@ Example context (json):
                                 <div class="child"><a href="http://foselearning.knowtechture.com/moodle/course/index.php?categoryid=3"><div></div></a></div>
                                 <div class="child"><a href="http://foselearning.knowtechture.com/moodle/course/index.php?categoryid=5"><div></div></a></div>
                             </div>
-                            <div id="page-content" class="pb-3 d-print-block ktt_wrapper">
+                            <div id="page-content" class="pb-3 d-print-block">
                             <div>
                                 <div id="region-main-box">
                                     {{#hasregionmainsettingsmenu}}
