@@ -106,7 +106,10 @@ $templatecontext = [
     'overflow' => $overflow,
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
-    'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood')
+    'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood'),
+    'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_ddmood'),
+    'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_ddmood'),
+    'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_ddmood')
     /*,
     'partner1' => $OUTPUT->image_url('ou_img/Ministryofhealth', 'theme_ktt_boost_child_cmrn'),
     'partner2' => $OUTPUT->image_url('ou_img/psi-cameroon', 'theme_ktt_boost_child_cmrn'),

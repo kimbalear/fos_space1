@@ -201,6 +201,29 @@ h5 {
   border: none;
 }
 
+/*
+.cstm_owl {
+  padding: 0;
+
+  .owl-carousel {
+    display: flex;
+    .owl-stage-outer {
+      .owl-stage {
+        padding-bottom: 8px;
+        .item {
+          display: flex;
+          justify-content: center;
+          //align-items: center;
+          .cont_course {
+            height: auto;
+            min-height: 230px;
+          }
+        }
+      }
+    }
+  }
+}
+*/
 .card {
   position: relative;
   display: flex;
