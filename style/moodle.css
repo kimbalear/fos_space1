@@ -158,16 +158,6 @@ h5 {
   justify-content: center;
   align-items: center;
   height: 100%;
-  /*
-      @include brk575 {
-          margin: 0;
-          position: relative;
-          display: flex;
-          justify-content: start;
-          align-items: start;
-          height: 100%;
-      }
-  */
 }
 .ktt_log_page .imgbk {
   position: absolute;
@@ -177,15 +167,6 @@ h5 {
   height: 100%;
   object-fit: cover;
   object-position: left;
-  /*
-          @include brk575 {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 0;
-              height: 0;
-          }
-          */
 }
 .ktt_log_page .lg_cnt {
   position: absolute;
@@ -199,26 +180,10 @@ h5 {
   align-items: start;
   max-width: 390px;
   overflow-y: auto;
-  /*
-          @include brk575 {
-              position: relative;
-              width: 100%;
-              max-width: 390px;
-              margin: 0 auto;
-              height: auto;
-              border-left: none;
-          }
-  */
   overflow-y: auto;
 }
 .ktt_log_page .lg_cnt div[role=main] {
   width: 100%;
-  /*
-              @include brk575 {
-                  width: 100%;
-                  height: auto;
-              }
-  */
 }
 .ktt_log_page .lg_cnt div[role=main] .loginform .login-logo {
   display: flex;
@@ -228,6 +193,9 @@ h5 {
   width: 150px !important;
   height: 150px !important;
   margin: 0px auto !important;
+}
+.ktt_log_page .lg_cnt div[role=main] .loginform .login-form input {
+  width: 100%;
 }
 .ktt_log_page .lg_cnt div[role=main] .loginform .login-form .login-form-submit .btn {
   width: 100% !important;
@@ -243,6 +211,13 @@ h5 {
 .ktt_log_page .lg_cnt div[role=main] #guestlogin .btn {
   width: 100% !important;
   margin-bottom: 16px;
+}
+.ktt_log_page .lg_cnt div[role=main] .d-flex {
+  display: inline !important;
+}
+.ktt_log_page .lg_cnt div[role=main] .d-flex .login-languagemenu {
+  width: 100% !important;
+  margin: 20px 0;
 }
 .ktt_log_page .lg_cnt div[role=main] .d-flex .btn {
   width: 100% !important;

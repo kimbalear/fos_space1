@@ -5,34 +5,15 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-/*
-    @include brk575 {
-        margin: 0;
-        position: relative;
-        display: flex;
-        justify-content: start;
-        align-items: start;
-        height: 100%;
-    }
-*/
+
     .imgbk {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover; // Ajusta la imagen para cubrir el contenedor sin deformarse
-        object-position: left; // Centra la imagen en el contenedor
-        //transform: scaleX(-1);
-/*
-        @include brk575 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-        }
-        */
+        object-fit: cover;
+        object-position: left;
     }
 
     .lg_cnt {
@@ -47,24 +28,10 @@
         align-items: start;
         max-width: 390px;
         overflow-y: auto;
-/*
-        @include brk575 {
-            position: relative;
-            width: 100%;
-            max-width: 390px;
-            margin: 0 auto;
-            height: auto;
-            border-left: none;
-        }
-*/
+
         div[role="main"] {
             width: 100%;
-/*
-            @include brk575 {
-                width: 100%;
-                height: auto;
-            }
-*/
+
             .loginform {
 
                 .login-logo {
@@ -72,6 +39,7 @@
                     padding: 30px 0 50px;
 
                     #logoimage {
+                        //TODO HTML
                         width: 150px !important;
                         height: 150px !important;
                         margin: 0px auto !important;
@@ -79,6 +47,9 @@
                 }
 
                 .login-form {
+                    input {
+                        width: 100%;
+                    }
                     .login-form-submit {
                         .btn {
                             width: 100% !important;
@@ -107,6 +78,11 @@
             }
 
             .d-flex {
+                display: inline!important;
+                .login-languagemenu {
+                    width: 100%!important;
+                    margin: 20px 0;
+                }
                 .btn {
                     width: 100% !important;
                     margin-bottom: 16px;
