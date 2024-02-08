@@ -23,19 +23,16 @@ defined('MOODLE_INTERNAL') || die();
  * @copyright 2016 Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+$extraclasses[] = 'ktt-boost-login';
+$bodyattributes = $OUTPUT->body_attributes($extraclasses);
 
-$bodyattributes = $OUTPUT->body_attributes();
-
-$showlogintext = (get_config('theme_ddmood','showlogintext') == 1)?1:null;
-$logintext =  get_config('theme_ddmood','logintext');
-
+//$bodyattributes = $OUTPUT->body_attributes();
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
-    'showlogintext' => $showlogintext,
-    'logintext'  =>  $logintext
+    'imagbk' => $OUTPUT->image_url('/imagelogin', 'theme_ddmood')
 ];
 
 echo $OUTPUT->render_from_template('theme_boost/login', $templatecontext);

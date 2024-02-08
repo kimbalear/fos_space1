@@ -1,28 +1,8 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
-//
-// Moodle is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// Moodle is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+global $USER;
 
-/**
- * A drawer based layout for the boost theme.
- *
- * @package   theme_boost
- * @copyright 2021 Bas Brands
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
-defined('MOODLE_INTERNAL') || die();
+if (isloggedin() && !isguestuser()) {
+    defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/behat/lib.php');
 require_once($CFG->dirroot . '/course/lib.php');
@@ -109,16 +89,18 @@ $templatecontext = [
     'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood'),
     'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_ddmood'),
     'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_ddmood'),
-    'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_ddmood')
-    /*,
-    'partner1' => $OUTPUT->image_url('ou_img/Ministryofhealth', 'theme_ktt_boost_child_cmrn'),
-    'partner2' => $OUTPUT->image_url('ou_img/psi-cameroon', 'theme_ktt_boost_child_cmrn'),
-    'partner3' => $OUTPUT->image_url('ou_img/logo', 'theme_ktt_boost_child_cmrn'),
-    'img1' => $OUTPUT->image_url('ou_img/img1', 'theme_ktt_boost_child_cmrn'),
-    'img2' => $OUTPUT->image_url('ou_img/img2', 'theme_ktt_boost_child_cmrn'),
-    'img3' => $OUTPUT->image_url('ou_img/img3', 'theme_ktt_boost_child_cmrn'),
-    'img4' => $OUTPUT->image_url('ou_img/img4', 'theme_ktt_boost_child_cmrn'),
-    'img5' => $OUTPUT->image_url('ou_img/img5', 'theme_ktt_boost_child_cmrn')*/
+    'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_ddmood'),
+    'i-our_FAT' => $OUTPUT->image_url('icons/fos_feminista_team', 'theme_ddmood'),
+    'i-our_FA' => $OUTPUT->image_url('icons/our_Feminist_Alliance', 'theme_ddmood'),
+    'i-ISEL' => $OUTPUT->image_url('icons/innovation_and_social_enterprise_lab', 'theme_ddmood'),
+    'i-CI' => $OUTPUT->image_url('icons/Centro_de_Incidencia', 'theme_ddmood'),
+    'i-CLR' => $OUTPUT->image_url('icons/center_for_legal_responses', 'theme_ddmood'),
+    'i-CTN' => $OUTPUT->image_url('icons/center_for_transformative_and_narratives', 'theme_ddmood'),
+    'i-C-CSE' => $OUTPUT->image_url('icons/center_for_CSE_and_youth-friendly_services', 'theme_ddmood')
+
 ];
 
 echo $OUTPUT->render_from_template('theme_ddmood/frontpage', $templatecontext);
+} else {
+    redirect(get_login_url());
+}
