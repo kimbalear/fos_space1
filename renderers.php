@@ -6,8 +6,51 @@ require_once($CFG->dirroot . '/course/renderer.php');
 
 class theme_ddmood_core_course_renderer extends core_course_renderer
 {
+    /**
+     * Renders HTML to display one course module in a course section
+     *
+     * This includes link, content, availability, completion info and additional information
+     * that module type wants to display (i.e. number of unread forum posts)
+     *
+     * @deprecated since 4.0 MDL-72656 - use core_course output components instead.
+     *
+     * @param stdClass $course
+     * @param completion_info $completioninfo
+     * @param cm_info $mod
+     * @param int|null $sectionreturn
+     * @param array $displayoptions
+     * @return string
+     */
+    public function course_section_cm($course, &$completioninfo, cm_info $mod, $sectionreturn, $displayoptions = []) {
 
-/**
+        debugging(
+            'course_section_cm is deprecated. Use core_courseformat\\output\\content\\cm output class instead.',
+            DEBUG_DEVELOPER
+        );
+
+        if (!$mod->is_visible_on_course_page()) {
+            return '';
+        }
+
+        $format = course_get_format($course);
+        $modinfo = $format->get_modinfo();
+        // Output renderers works only with real section_info objects.
+        if ($sectionreturn) {
+            $format->set_section_number($sectionreturn);
+        }
+        $section = $modinfo->get_section_info($format->get_section_number());
+
+        $cmclass = $format->get_output_classname('content\\cm');
+        $cm = new $cmclass($format, $section, $mod, $displayoptions);
+        // The course outputs works with format renderers, not with course renderers.
+        $renderer = $format->get_renderer($this->page);
+        $data = $cm->export_for_template($renderer);
+        
+        
+        return $this->output->render_from_template('core_courseformat/local/content/cm', $data);
+    }
+
+    /**
      * Displays one course in the list of courses.
      *
      * This is an internal function, to display an information about just one course
@@ -19,7 +62,8 @@ class theme_ddmood_core_course_renderer extends core_course_renderer
      *    depend on the course position in list - first/last/even/odd)
      * @return string
      */
-    protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
+    protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '')
+    {
         if (!isset($this->strings->summary)) {
             $this->strings->summary = get_string('summary');
         }
@@ -30,7 +74,7 @@ class theme_ddmood_core_course_renderer extends core_course_renderer
             $course = new core_course_list_element($course);
         }
         $content = '';
-        $classes = trim('coursebox clearfix '. $additionalclasses);
+        $classes = trim('coursebox clearfix ' . $additionalclasses);
         if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
             $classes .= ' collapsed';
         }
@@ -40,22 +84,23 @@ class theme_ddmood_core_course_renderer extends core_course_renderer
             'class' => $classes,
             'data-courseid' => $course->id,
             'data-type' => self::COURSECAT_TYPE_COURSE,
-        ));
+        )
+        );
 
-       // echo("<pre>");
-       // print_r($course);
-       // echo("</pre>");
+        //echo("<pre>");
+        //print_r($course);
+        //echo("</pre>");
 
         $content .= html_writer::start_tag('div', array('class' => 'info'));
 
         $content .= $this->course_name($chelper, $course);
 
         $content .= html_writer::start_tag('div', array('class' => 'ml-auto small text-muted'));
-        $content .= get_string('available', 'theme_ddmood') . ' ' . date('d-M-y',$course->startdate);
-        $content .= ($course->enddate > 0)?" to ". date('d-M-y',$course->enddate):'';
+        $content .= get_string('available', 'theme_ddmood') . ' ' . date('d-M-y', $course->startdate);
+        $content .= ($course->enddate > 0) ? " to " . date('d-M-y', $course->enddate) : '';
         $content .= html_writer::end_tag('div');
 
-        
+
 
         $content .= $this->course_enrolment_icons($course);
         $content .= html_writer::end_tag('div');
@@ -70,9 +115,9 @@ class theme_ddmood_core_course_renderer extends core_course_renderer
 
 }
 
-require_once($CFG->dirroot .'/mod/assign/classes/output/renderer.php');
+require_once($CFG->dirroot . '/mod/assign/classes/output/renderer.php');
 
-class theme_ddmood_mod_assign_renderer extends mod_assign\output\renderer 
+class theme_ddmood_mod_assign_renderer extends mod_assign\output\renderer
 {
 
     /**
@@ -81,21 +126,22 @@ class theme_ddmood_mod_assign_renderer extends mod_assign\output\renderer
      * @param \assign_grading_summary $summary
      * @return string
      */
-    public function render_assign_grading_summary(\assign_grading_summary $summary) {
+    public function render_assign_grading_summary(\assign_grading_summary $summary)
+    {
 
         // echo "My name is " , get_class($this) , "\n";
-        
+
         // Create a table for the data.
         $o = '';
         $o .= $this->output->container_start('gradingsummary');
 
         $o .= "<div class='alert alert-info'>TEST</div>";
         // btn custom
-        $o .= \html_writer::start_tag('button', array('type'=>'button','class' => 'btn btn-primary bnt-custom-exp','data-toggle'=>'collapse','data-target'=>'#gscollapse','aria-controls'=>'gscollapse'));
+        $o .= \html_writer::start_tag('button', array('type' => 'button', 'class' => 'btn btn-primary bnt-custom-exp', 'data-toggle' => 'collapse', 'data-target' => '#gscollapse', 'aria-controls' => 'gscollapse'));
         $o .= get_string('displaysummary', 'theme_ddmood');
         $o .= \html_writer::end_tag('button');
         //-
-        $o .= \html_writer::start_tag('div', array('class' => 'collapse','id'=>'gscollapse'));
+        $o .= \html_writer::start_tag('div', array('class' => 'collapse', 'id' => 'gscollapse'));
 
         $o .= $this->output->heading(get_string('gradingsummary', 'assign'), 3);
 
@@ -193,7 +239,7 @@ class theme_ddmood_mod_assign_renderer extends mod_assign\output\renderer
         $o .= \html_writer::table($t);
 
         $o .= \html_writer::end_tag('div');
-        
+
         $o .= $this->output->box_end();
 
         // Close the container and insert a spacer.
@@ -214,8 +260,13 @@ class theme_ddmood_mod_assign_renderer extends mod_assign\output\renderer
      * @param array $secondattributes The second column attributes (optional)
      * @return void
      */
-    private function add_table_row_tuple(\html_table $table, $first, $second, $firstattributes = [],
-            $secondattributes = []) {
+    private function add_table_row_tuple(
+        \html_table $table,
+        $first,
+        $second,
+        $firstattributes = [],
+        $secondattributes = []
+    ) {
         $row = new \html_table_row();
         $cell1 = new \html_table_cell($first);
         $cell1->header = true;
