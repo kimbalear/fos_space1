@@ -53,8 +53,6 @@ Example context (json):
 }}
 {{> theme_boost/head }}
 
-<!DOCTYPE html>
-
 <body {{{ bodyattributes }}}>
     {{> core/local/toast/wrapper}}
     <div id="page-wrapper" class="d-print-block">
@@ -120,8 +118,9 @@ Example context (json):
                             </div>
                             {{/secondarymoremenu}}
                             <div class="container_cat">
-                                <div class="child">
-                                    <a href="/my/courses.php#sb-1">
+                                {{#cohorts.FosFeministaTeam}}
+                                <div class="child fos_feminista_team">
+                                    <a href="/course/index.php?categoryid=1">
                                         <div class="cat-cta">
                                             <div class="icon">
                                                 <img src="{{{i-our_FAT}}}">
@@ -130,8 +129,11 @@ Example context (json):
                                         </div>
                                     </a>
                                 </div>
-                                <div class="child">
-                                    <a href="/my/courses.php#sb-2">
+                                {{/cohorts.FosFeministaTeam}}
+
+                                {{#cohorts.OurFeministAlliance}}
+                                <div class="child our_feminist_alliance">
+                                    <a href="/course/index.php?categoryid=2">
                                         <div class="cat-cta">
                                             <div class="icon">
                                                 <img src="{{{i-our_FA}}}">
@@ -140,8 +142,50 @@ Example context (json):
                                         </div>
                                     </a>
                                 </div>
-                                <div class="child">
-                                    <a href="/my/courses.php#sb-3">
+                                {{/cohorts.OurFeministAlliance}}
+
+                                {{#cohorts.InnovationSocialEnterpriseLab}}
+                                <div class="child innovation_social_enterprise_lab">
+                                    <a href="/course/index.php?categoryid=3">
+                                        <div class="cat-cta">
+                                            <div class="icon">
+                                                <img src="{{{i-our_FA}}}">
+                                            </div>
+                                            <div class="title">Innovation & Social Enterprise Lab</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                {{/cohorts.InnovationSocialEnterpriseLab}}
+
+                                {{#cohorts.CenterforEvidenceBasedAdvocacy}}
+                                <div class="child center_for_evidence_based_Advocacy">
+                                    <a href="/course/index.php?categoryid=8">
+                                        <div class="cat-cta">
+                                            <div class="icon">
+                                                <img src="{{{i-our_FA}}}">
+                                            </div>
+                                            <div class="title">Center for Evidence-Based Advocacy</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                {{/cohorts.CenterforEvidenceBasedAdvocacy}}
+
+                                {{#cohorts.CenterforLegalResponses}}
+                                <div class="child center_for_legal_responses">
+                                    <a href="/course/index.php?categoryid=5">
+                                        <div class="cat-cta">
+                                            <div class="icon">
+                                                <img src="{{{i-our_FA}}}">
+                                            </div>
+                                            <div class="title">Center for Legal Responses</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                {{/cohorts.CenterforLegalResponses}}
+
+                                {{#cohorts.CenterForTransformativeNarratives}}
+                                <div class="child center_for_transformative_Narratives">
+                                    <a href="/course/index.php?categoryid=4">
                                         <div class="cat-cta">
                                             <div class="icon">
                                                 <img src="{{{i-CTN}}}">
@@ -150,6 +194,20 @@ Example context (json):
                                         </div>
                                     </a>
                                 </div>
+                                {{/cohorts.CenterForTransformativeNarratives}}
+
+                                {{#cohorts.CenterforCSEYouthFriendlyServices}}
+                                <div class="child center_for_CSE_youth_friendly_services">
+                                    <a href="/course/index.php?categoryid=9">
+                                        <div class="cat-cta">
+                                            <div class="icon">
+                                                <img src="{{{i-our_FA}}}">
+                                            </div>
+                                            <div class="title">Center for CSE & Youth-Friendly Services</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                {{/cohorts.CenterforCSEYouthFriendlyServices}}
                             </div>
                             <div id="page-content" class="pb-3 d-print-block">
                             <!--

@@ -7,6 +7,20 @@ if (isloggedin() && !isguestuser()) {
     require_once($CFG->libdir . '/behat/lib.php');
     require_once($CFG->dirroot . '/course/lib.php');
 
+    // KTT CUSTOMIZATION, SEARCH FOR USER COHORTS
+    require_once($CFG->dirroot . '/cohort/lib.php');
+
+    $cohorts = new stdClass();
+
+    if ($USER->id !== 0) {
+        $cohortids = array();
+        $userCohorts = cohort_get_user_cohorts($USER->id);
+
+        foreach ($userCohorts as $cohort){
+            $cohortIdentifier = $cohort->idnumber;
+            $cohorts->$cohortIdentifier = $cohortIdentifier;
+        }
+    }
 
     // Add block button in editing mode.
     $addblockbutton = $OUTPUT->addblockbutton();
@@ -67,36 +81,37 @@ if (isloggedin() && !isguestuser()) {
     $headercontent = $header->export_for_template($renderer);
 
     $templatecontext = [
-        'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-        'output' => $OUTPUT,
-        'sidepreblocks' => $blockshtml,
-        'hasblocks' => $hasblocks,
-        'bodyattributes' => $bodyattributes,
-        'courseindexopen' => $courseindexopen,
-        'blockdraweropen' => $blockdraweropen,
-        'courseindex' => $courseindex,
-        'primarymoremenu' => $primarymenu['moremenu'],
-        'secondarymoremenu' => $secondarynavigation ?: false,
-        'mobileprimarynav' => $primarymenu['mobileprimarynav'],
-        'usermenu' => $primarymenu['user'],
-        'langmenu' => $primarymenu['lang'],
-        'forceblockdraweropen' => $forceblockdraweropen,
-        'regionmainsettingsmenu' => $regionmainsettingsmenu,
-        'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-        'overflow' => $overflow,
-        'headercontent' => $headercontent,
-        'addblockbutton' => $addblockbutton,
-        'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood'),
-        'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_ddmood'),
-        'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_ddmood'),
-        'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_ddmood'),
-        'i-our_FAT' => $OUTPUT->image_url('icons/fos_feminista_team', 'theme_ddmood'),
-        'i-our_FA' => $OUTPUT->image_url('icons/our_Feminist_Alliance', 'theme_ddmood'),
-        'i-ISEL' => $OUTPUT->image_url('icons/innovation_and_social_enterprise_lab', 'theme_ddmood'),
-        'i-CI' => $OUTPUT->image_url('icons/Centro_de_Incidencia', 'theme_ddmood'),
-        'i-CLR' => $OUTPUT->image_url('icons/center_for_legal_responses', 'theme_ddmood'),
-        'i-CTN' => $OUTPUT->image_url('icons/center_for_transformative_and_narratives', 'theme_ddmood'),
-        'i-C-CSE' => $OUTPUT->image_url('icons/center_for_CSE_and_youth-friendly_services', 'theme_ddmood')
+            'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+            'output' => $OUTPUT,
+            'sidepreblocks' => $blockshtml,
+            'hasblocks' => $hasblocks,
+            'bodyattributes' => $bodyattributes,
+            'courseindexopen' => $courseindexopen,
+            'blockdraweropen' => $blockdraweropen,
+            'courseindex' => $courseindex,
+            'primarymoremenu' => $primarymenu['moremenu'],
+            'secondarymoremenu' => $secondarynavigation ?: false,
+            'mobileprimarynav' => $primarymenu['mobileprimarynav'],
+            'usermenu' => $primarymenu['user'],
+            'langmenu' => $primarymenu['lang'],
+            'cohorts' => $cohorts,
+            'forceblockdraweropen' => $forceblockdraweropen,
+            'regionmainsettingsmenu' => $regionmainsettingsmenu,
+            'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+            'overflow' => $overflow,
+            'headercontent' => $headercontent,
+            'addblockbutton' => $addblockbutton,
+            'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood'),
+            'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_ddmood'),
+            'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_ddmood'),
+            'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_ddmood'),
+            'i-our_FAT' => $OUTPUT->image_url('icons/fos_feminista_team', 'theme_ddmood'),
+            'i-our_FA' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
+            'i-ISEL' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
+            'i-CI' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
+            'i-CLR' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
+            'i-CTN' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
+            'i-C-CSE' => $OUTPUT->image_url('icons/others', 'theme_ddmood')
 
     ];
 
