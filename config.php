@@ -43,7 +43,7 @@ $THEME->layouts = [
         'options' => array('langmenu' => true),
     ),
     'coursecategory' => array(
-        'file' => 'drawers.php',
+        'file' => 'coursecategory.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
