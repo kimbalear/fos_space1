@@ -83,172 +83,159 @@ Example context (json):
             {{/hasblocks}}
             <div id="page" data-region="mainpage" data-usertour="scroller"
                 class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
-                        <div id="topofscroll" class="main-inner custom-inner">
-                            <div class="drawer-toggles d-flex">
-                                {{#hasblocks}}
-                                <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
-                                    <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle"
-                                        data-target="theme_boost-drawers-blocks" data-toggle="tooltip"
-                                        data-placement="right" title="{{#str}}opendrawerblocks, core{{/str}}">
-                                        <span class="sr-only">{{#str}}opendrawerblocks, core{{/str}}</span>
-                                        <span class="dir-rtl-hide">{{#pix}}t/blocks_drawer, core{{/pix}}</span>
-                                        <span class="dir-ltr-hide">{{#pix}}t/blocks_drawer_rtl, core{{/pix}}</span>
-                                    </button>
-                                </div>
-                                {{/hasblocks}}
-                            </div>
-
-                            <div class="cstm_owl">
-                                <div id="owl-carousel_slider" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <img src="{{{slider1}}}" class="image-desktop">
-                                    </div>
-                                    <div class="item">
-                                        <img src="{{{slider2}}}" class="image-desktop">
-                                    </div>
-                                    <div class="item">
-                                        <img src="{{{slider3}}}" class="image-desktop">
-                                    </div>
-                                </div>
-                            </div>
-<!--                            {{{ output.full_header }}} -->
-                            {{#secondarymoremenu}}
-                            <div class="secondary-navigation d-print-none ktt-secondary-navigation">
-                                {{> core/moremenu}}
-                            </div>
-                            {{/secondarymoremenu}}
-                            <div class="container_cat">
-                                {{#cohorts.FosFeministaTeam}}
-                                <div class="child fos_feminista_team">
-                                    <a href="/course/index.php?categoryid=1">
-                                        <div class="cat-cta">
-                                            <div class="icon">
-                                                <img src="{{{i-our_FAT}}}">
-                                            </div>
-                                            <div class="title">Fòs Feminista Team</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/cohorts.FosFeministaTeam}}
-
-                                {{#cohorts.OurFeministAlliance}}
-                                <div class="child our_feminist_alliance">
-                                    <a href="/course/index.php?categoryid=2">
-                                        <div class="cat-cta">
-                                            <div class="icon">
-                                                <img src="{{{i-our_FA}}}">
-                                            </div>
-                                            <div class="title">Our Feminist Alliance</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/cohorts.OurFeministAlliance}}
-
-                                {{#cohorts.InnovationSocialEnterpriseLab}}
-                                <div class="child innovation_social_enterprise_lab">
-                                    <a href="/course/index.php?categoryid=3">
-                                        <div class="cat-cta">
-                                            <div class="icon">
-                                                <img src="{{{i-our_FA}}}">
-                                            </div>
-                                            <div class="title">Innovation & Social Enterprise Lab</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/cohorts.InnovationSocialEnterpriseLab}}
-
-                                {{#cohorts.CenterforEvidenceBasedAdvocacy}}
-                                <div class="child center_for_evidence_based_Advocacy">
-                                    <a href="/course/index.php?categoryid=8">
-                                        <div class="cat-cta">
-                                            <div class="icon">
-                                                <img src="{{{i-our_FA}}}">
-                                            </div>
-                                            <div class="title">Center for Evidence-Based Advocacy</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/cohorts.CenterforEvidenceBasedAdvocacy}}
-
-                                {{#cohorts.CenterforLegalResponses}}
-                                <div class="child center_for_legal_responses">
-                                    <a href="/course/index.php?categoryid=5">
-                                        <div class="cat-cta">
-                                            <div class="icon">
-                                                <img src="{{{i-our_FA}}}">
-                                            </div>
-                                            <div class="title">Center for Legal Responses</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/cohorts.CenterforLegalResponses}}
-
-                                {{#cohorts.CenterForTransformativeNarratives}}
-                                <div class="child center_for_transformative_Narratives">
-                                    <a href="/course/index.php?categoryid=4">
-                                        <div class="cat-cta">
-                                            <div class="icon">
-                                                <img src="{{{i-CTN}}}">
-                                            </div>
-                                            <div class="title">Center for Transformative Narratives</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/cohorts.CenterForTransformativeNarratives}}
-
-                                {{#cohorts.CenterforCSEYouthFriendlyServices}}
-                                <div class="child center_for_CSE_youth_friendly_services">
-                                    <a href="/course/index.php?categoryid=9">
-                                        <div class="cat-cta">
-                                            <div class="icon">
-                                                <img src="{{{i-our_FA}}}">
-                                            </div>
-                                            <div class="title">Center for CSE & Youth-Friendly Services</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/cohorts.CenterforCSEYouthFriendlyServices}}
-                            </div>
-                            <div id="page-content" class="pb-3 d-print-block">
-                            <!--
-                            <div>
-                                <div id="region-main-box">
-                                    {{#hasregionmainsettingsmenu}}
-                                    <div id="region-main-settings-menu" class="d-print-none">
-                                        <div> {{{ regionmainsettingsmenu }}} </div>
-                                    </div>
-                                    {{/hasregionmainsettingsmenu}}
-                                    <section id="region-main" aria-label="{{#str}}content{{/str}}">
-
-                                        {{#hasregionmainsettingsmenu}}
-                                        <div class="region_main_settings_menu_proxy"></div>
-                                        {{/hasregionmainsettingsmenu}}
-                                        {{{ output.course_content_header }}}
-                                        {{#headercontent}}
-                                        {{> core/activity_header }}
-                                        {{/headercontent}}
-                                        {{#overflow}}
-                                        <div class="container-fluid tertiary-navigation">
-                                            <div class="navitem">
-                                                {{> core/url_select}}
-                                            </div>
-                                        </div>
-                                        {{/overflow}}
-                                        {{{ output.main_content }}}
-                                        {{{ output.activity_navigation }}}
-                                        {{{ output.course_content_footer }}}
-
-                                    </section>
-                                </div>
-
-                            </div>
-                            -->
-                        </div>
-                        {{> theme_boost/footer }}
+                <div id="topofscroll" class="main-inner custom-inner">
+                    <div class="drawer-toggles d-flex">
+                    {{#hasblocks}}
+                    <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
+                        <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-blocks" data-toggle="tooltip" data-placement="right" title="{{#str}}opendrawerblocks, core{{/str}}">
+                            <span class="sr-only">{{#str}}opendrawerblocks, core{{/str}}</span>
+                            <span class="dir-rtl-hide">{{#pix}}t/blocks_drawer, core{{/pix}}</span>
+                            <span class="dir-ltr-hide">{{#pix}}t/blocks_drawer_rtl, core{{/pix}}</span>
+                        </button>
                     </div>
-                    {{{ output.standard_after_main_region_html }}}
+                    {{/hasblocks}}
+                </div>
+                <div class="cstm_owl">
+                    <div id="owl-carousel_slider" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="{{{slider1}}}" class="image-desktop">
+                        </div>
+                        <div class="item">
+                            <img src="{{{slider2}}}" class="image-desktop">
+                        </div>
+                        <div class="item">
+                            <img src="{{{slider3}}}" class="image-desktop">
+                        </div>
+                    </div>
                 </div>
 
+                {{#secondarymoremenu}}
+                <div class="secondary-navigation d-print-none ktt-secondary-navigation">
+                    {{> core/moremenu}}
+                </div>
+                {{/secondarymoremenu}}
+                <div class="container_cat">
+                    {{#cohorts.FosFeministaTeam}}
+                    <div class="child fos_feminista_team">
+                        <a href="{{{config.wwwroot}}}/course/index.php?categoryid=1">
+                            <div class="cat-cta">
+                                <div class="icon">
+                                    <img src="{{{i-our_FAT}}}">
+                                </div>
+                                <div class="title">Fòs Feminista Team</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/cohorts.FosFeministaTeam}}
+                    {{#cohorts.OurFeministAlliance}}
+                    <div class="child our_feminist_alliance">
+                        <a href="{{{config.wwwroot}}}/course/index.php?categoryid=2">
+                            <div class="cat-cta">
+                                <div class="icon">
+                                    <img src="{{{i-our_FA}}}">
+                                </div>
+                                <div class="title">Our Feminist Alliance</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/cohorts.OurFeministAlliance}}
+                    {{#cohorts.InnovationSocialEnterpriseLab}}
+                    <div class="child innovation_social_enterprise_lab">
+                        <a href="{{{config.wwwroot}}}/course/index.php?categoryid=3">
+                            <div class="cat-cta">
+                                <div class="icon">
+                                    <img src="{{{i-our_FA}}}">
+                                </div>
+                                <div class="title">Innovation & Social Enterprise Lab</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/cohorts.InnovationSocialEnterpriseLab}}
+                    {{#cohorts.CenterforEvidenceBasedAdvocacy}}
+                    <div class="child center_for_evidence_based_Advocacy">
+                        <a href="{{{config.wwwroot}}}/course/index.php?categoryid=8">
+                            <div class="cat-cta">
+                                <div class="icon">
+                                    <img src="{{{i-our_FA}}}">
+                                </div>
+                                <div class="title">Center for Evidence-Based Advocacy</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/cohorts.CenterforEvidenceBasedAdvocacy}}
+                    {{#cohorts.CenterforLegalResponses}}
+                    <div class="child center_for_legal_responses">
+                        <a href="{{{config.wwwroot}}}/course/index.php?categoryid=5">
+                            <div class="cat-cta">
+                                <div class="icon">
+                                    <img src="{{{i-our_FA}}}">
+                                </div>
+                                <div class="title">Center for Legal Responses</div>
+                            </div>
+                        </a>
+                     </div>
+                    {{/cohorts.CenterforLegalResponses}}
+                    {{#cohorts.CenterForTransformativeNarratives}}
+                    <div class="child center_for_transformative_Narratives">
+                        <a href="{{{config.wwwroot}}}/course/index.php?categoryid=4">
+                            <div class="cat-cta">
+                                <div class="icon">
+                                    <img src="{{{i-CTN}}}">
+                                </div>
+                                <div class="title">Center for Transformative Narratives</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/cohorts.CenterForTransformativeNarratives}}
+                    {{#cohorts.CenterforCSEYouthFriendlyServices}}
+                    <div class="child center_for_CSE_youth_friendly_services">
+                        <a href="{{{config.wwwroot}}}/course/index.php?categoryid=9">
+                            <div class="cat-cta">
+                                <div class="icon">
+                                    <img src="{{{i-our_FA}}}">
+                                </div>
+                                <div class="title">Center for CSE & Youth-Friendly Services</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/cohorts.CenterforCSEYouthFriendlyServices}}
+                </div>
+                <!--
+                <div id="page-content" class="pb-3 d-print-block">
+                    <div>
+                        <div id="region-main-box">
+                            {{#hasregionmainsettingsmenu}}
+                            <div id="region-main-settings-menu" class="d-print-none">
+                                    <div> {{{ regionmainsettingsmenu }}} </div>
+                            </div>
+                            {{/hasregionmainsettingsmenu}}
+                            <section id="region-main" aria-label="{{#str}}content{{/str}}">
+                                {{#hasregionmainsettingsmenu}}
+                                <div class="region_main_settings_menu_proxy"></div>
+                                {{/hasregionmainsettingsmenu}}
+                                {{{ output.course_content_header }}}
+                                {{#headercontent}}
+                                {{> core/activity_header }}
+                                {{/headercontent}}
+                                {{#overflow}}
+                                <div class="container-fluid tertiary-navigation">
+                                    <div class="navitem">
+                                        {{> core/url_select}}
+                                    </div>
+                                </div>
+                                {{/overflow}}
+                                {{{ output.main_content }}}
+                                {{{ output.activity_navigation }}}
+                                {{{ output.course_content_footer }}}
+                            </section>
+                        </div>
+
+                    </div>
+                </div>-->
+                {{> theme_boost/footer }}
+            </div>
+            {{{ output.standard_after_main_region_html }}}
+    </div>
 </body>
 
 </html>
