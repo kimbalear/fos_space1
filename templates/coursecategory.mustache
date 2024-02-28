@@ -1,68 +1,28 @@
+{{! Este es un archivo de plantilla Mustache para mostrar categorías de curso y sus cursos en Moodle }}
 {{> theme_boost/head }}
-
 <body {{{ bodyattributes }}}>
     {{> core/local/toast/wrapper}}
     <div id="page-wrapper" class="d-print-block">
+    {{{ output.standard_top_of_body_html }}}
 
-        {{{ output.standard_top_of_body_html }}}
+    {{> theme_boost/navbar }}
 
-        {{> theme_boost/navbar }}
-        {{#courseindex}}
-        {{< theme_boost/drawer }} {{$id}}theme_boost-drawers-courseindex{{/id}} {{$drawerclasses}}drawer drawer-left
-            {{#courseindexopen}}show{{/courseindexopen}}{{/drawerclasses}} {{$drawercontent}} {{{courseindex}}}
-            {{/drawercontent}} {{$drawerpreferencename}}drawer-open-index{{/drawerpreferencename}}
-            {{$drawerstate}}show-drawer-left{{/drawerstate}} {{$tooltipplacement}}right{{/tooltipplacement}}
-            {{$closebuttontext}}{{#str}}closecourseindex, core{{/str}}{{/closebuttontext}} {{/ theme_boost/drawer}}
-            {{/courseindex}} {{#hasblocks}} {{< theme_boost/drawer }} {{$id}}theme_boost-drawers-blocks{{/id}}
-            {{$drawerclasses}}drawer drawer-right{{#blockdraweropen}} show{{/blockdraweropen}}{{/drawerclasses}}
-            {{$drawercontent}} <section class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
-            {{{ addblockbutton }}}
-            <!--{{{ sidepreblocks }}}-->
-            </section>
-            {{/drawercontent}}
-            {{$drawerpreferencename}}drawer-open-block{{/drawerpreferencename}}
-            {{$forceopen}}{{#forceblockdraweropen}}1{{/forceblockdraweropen}}{{/forceopen}}
-            {{$drawerstate}}show-drawer-right{{/drawerstate}}
-            {{$tooltipplacement}}left{{/tooltipplacement}}
-            {{$drawercloseonresize}}1{{/drawercloseonresize}}
-            {{$closebuttontext}}{{#str}}closeblockdrawer, core{{/str}}{{/closebuttontext}}
-            {{/ theme_boost/drawer}}
-            {{/hasblocks}}
-            <div id="page" data-region="mainpage" data-usertour="scroller"
-                class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
-                <div id="topofscroll" class="main-inner custom-inner">
-                    <div class="drawer-toggles d-flex">
-                    {{#hasblocks}}
-                    <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
-                        <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-blocks" data-toggle="tooltip" data-placement="right" title="{{#str}}opendrawerblocks, core{{/str}}">
-                            <span class="sr-only">{{#str}}opendrawerblocks, core{{/str}}</span>
-                            <span class="dir-rtl-hide">{{#pix}}t/blocks_drawer, core{{/pix}}</span>
-                            <span class="dir-ltr-hide">{{#pix}}t/blocks_drawer_rtl, core{{/pix}}</span>
-                        </button>
+    <div id="page" data-region="mainpage" data-usertour="scroller"class="drawers drag-container">
+        <div class="grid-category">
+            <div class="img_header">
+                <div class="grid-header_content">
+                    <div class="logos">
+                        <div class="logo"></div>
                     </div>
-                    {{/hasblocks}}
+                    <div class="title">Lorem ipsum dor</div>
                 </div>
-                <div id="page-content" class="pb-3 d-print-block">
-                    <div class="category-courses">
-                        <h2>Cursos en la Categoría: {{categoryName}}</h2>
-                        {{#hasCourses}}
-                        <ul>
-                            {{#courses}}
-                            <li class="course-item">
-                                <h3><a href="{{courseUrl}}">{{courseName}}</a></h3>
-                                <p>{{courseSummary}}</p>
-                            </li>
-                            {{/courses}}
-                        </ul>
-                        {{/hasCourses}}
-                    </div>
-                </div>
-                {{> theme_boost/footer }}
             </div>
-            {{{ output.standard_after_main_region_html }}}
+            <div class="content-category">{{{contentcategory}}}</div>
+        </div>
     </div>
-</body>
-
+    {{> theme_boost/footer }}
+    {{{ output.standard_after_main_region_html }}}
+</div>
 </html>
 {{#js}}
 M.util.js_pending('theme_boost/loader');
