@@ -62,7 +62,7 @@ require(["jquery"], function ($) {
           margin: 30,
           stagePadding: 30,
           smartSpeed: 450,
-          loop: true,
+          //loop: true,
           autoplay: true
         });
       })

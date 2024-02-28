@@ -29,7 +29,7 @@ $string["Innovation_SocialEnterpriseLab"] = "Laboratorio de Innovación y Empres
 $string["CenterforEvidence-BasedAdvocacy"] = "Centro de defensa basada en evidencia";
 $string["CenterforLegalResponses"] = "Centro de Respuestas Legales";
 $string["CenterforTransformativeNarratives"] = "Centro de Narrativas Transformadoras";
-$string["CenterforCSE&Youth-FriendlyServices"] = "Centro de EIS y servicios orientados a los jóvenes";
+$string["CenterforCSE_Youth_FriendlyServices"] = "Centro de EIS y servicios orientados a los jóvenes";
 
 /* Footer */
 $string["PrivacyPolicy"] = "política de privacidad";
