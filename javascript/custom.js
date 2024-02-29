@@ -63,7 +63,7 @@ require(["jquery"], function ($) {
           stagePadding: 30,
           smartSpeed: 450,
           loop: true,
-          //autoplay: true
+          autoplay: true
         });
       })
       .catch(function () {
