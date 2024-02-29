@@ -476,9 +476,17 @@ h5 {
   border: none;
 }
 
-.title {
+#owl-carousel_slider {
   font-family: "Isidora Sans Medium", sans-serif;
   font-size: 1.2rem;
+}
+#owl-carousel_slider .item {
+  position: relative;
+}
+#owl-carousel_slider .item .title {
+  position: absolute;
+  top: 20%;
+  left: 10%;
 }
 
 .slider_clour_text_white {
