@@ -11,6 +11,7 @@
   align-items: stretch;
   grid-template-areas:
     "img_header"
+    "cta-btns"
     "content-category";
   .img_header {
     grid-area: img_header;
@@ -47,6 +48,33 @@
         align-self: center;
         grid-area: title;
       }
+    }
+  }
+
+  .cta-btns {
+    grid-area: cta-btns;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    gap: 0px 32px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    margin: 10px 0;
+    grid-template-areas: "cta-left cta-right";
+    .cta-left {
+      justify-self: end;
+      align-self: center;
+      grid-area: cta-left;
+    }
+
+    .cta-right {
+      justify-self: start;
+      align-self: center;
+      grid-area: cta-right;
     }
   }
 
