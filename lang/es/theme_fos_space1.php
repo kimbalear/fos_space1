@@ -35,3 +35,6 @@ $string["CenterforCSE_Youth_FriendlyServices"] = "Centro de EIS y servicios orie
 $string["PrivacyPolicy"] = "política de privacidad";
 $string["TermsofUse"] = "Condiciones de uso";
 $string["textfooter"] = "Al acceder a este sistema de gestión de aprendizaje, usted acepta cumplir con los Términos y condiciones de uso. Esto incluye garantizar que este sea un espacio libre de abuso, discriminación y material ofensivo, así como un sitio donde se respete la confidencialidad y las opiniones personales expresadas no se compartan externamente.";
+
+$string["Community"] = "Comunidad";
+$string["KnowledgeSharing"] = "El intercambio de conocimientos";
