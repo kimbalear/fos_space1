@@ -52,11 +52,13 @@ if (isloggedin() && !isguestuser()) {
         'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
         'output' => $OUTPUT,
         'sidepreblocks' => $blockshtml,
+        'hasblocks' => $hasblocks,
         'bodyattributes' => $bodyattributes,
         'courseindexopen' => $courseindexopen,
         'blockdraweropen' => $blockdraweropen,
         'courseindex' => $courseindex,
         'primarymoremenu' => $primarymenu['moremenu'],
+        'secondarymoremenu' => $secondarynavigation ?: false,
         'mobileprimarynav' => $primarymenu['mobileprimarynav'],
         'usermenu' => $primarymenu['user'],
         'langmenu' => $primarymenu['lang'],
@@ -68,10 +70,10 @@ if (isloggedin() && !isguestuser()) {
         'headercontent' => $headercontent,
         'addblockbutton' => $addblockbutton,
         'contentcategory' => $OUTPUT->main_content(),
-        'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood')
+        'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_fos_space1')
 
     ];
-    echo $OUTPUT->render_from_template('theme_ddmood/coursecategory', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_fos_space1/coursecategory', $templatecontext);
 } else {
     redirect(get_login_url());
 }

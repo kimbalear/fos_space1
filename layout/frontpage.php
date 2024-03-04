@@ -101,21 +101,21 @@ if (isloggedin() && !isguestuser()) {
             'overflow' => $overflow,
             'headercontent' => $headercontent,
             'addblockbutton' => $addblockbutton,
-            'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood'),
-            'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_ddmood'),
-            'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_ddmood'),
-            'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_ddmood'),
-            'i-our_FAT' => $OUTPUT->image_url('icons/fos_feminista_team', 'theme_ddmood'),
-            'i-our_FA' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
-            'i-ISEL' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
-            'i-CI' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
-            'i-CLR' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
-            'i-CTN' => $OUTPUT->image_url('icons/others', 'theme_ddmood'),
-            'i-C-CSE' => $OUTPUT->image_url('icons/others', 'theme_ddmood')
+            'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_fos_space1'),
+            'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_fos_space1'),
+            'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_fos_space1'),
+            'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_fos_space1'),
+            'i-our_FAT' => $OUTPUT->image_url('icons/fos_feminista_team', 'theme_fos_space1'),
+            'i-our_FA' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
+            'i-ISEL' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
+            'i-CI' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
+            'i-CLR' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
+            'i-CTN' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
+            'i-C-CSE' => $OUTPUT->image_url('icons/others', 'theme_fos_space1')
 
     ];
 
-    echo $OUTPUT->render_from_template('theme_ddmood/frontpage', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_fos_space1/frontpage', $templatecontext);
 } else {
     redirect(get_login_url());
 }

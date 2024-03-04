@@ -105,7 +105,7 @@ $templatecontext = [
     'overflow' => $overflow,
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
-    'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood')
+    'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_fos_space1')
 ];
 
 echo $OUTPUT->render_from_template('theme_boost/drawers', $templatecontext);

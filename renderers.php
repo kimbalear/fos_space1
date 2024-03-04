@@ -4,7 +4,7 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/course/renderer.php');
 
-class theme_ddmood_core_course_renderer extends core_course_renderer
+class theme_fos_space1_core_course_renderer extends core_course_renderer
 {
     /**
      * Renders HTML to display one course module in a course section
@@ -96,7 +96,7 @@ class theme_ddmood_core_course_renderer extends core_course_renderer
         $content .= $this->course_name($chelper, $course);
 
         $content .= html_writer::start_tag('div', array('class' => 'ml-auto small text-muted'));
-        $content .= get_string('available', 'theme_ddmood') . ' ' . date('d-M-y', $course->startdate);
+        $content .= get_string('available', 'theme_fos_space1') . ' ' . date('d-M-y', $course->startdate);
         $content .= ($course->enddate > 0) ? " to " . date('d-M-y', $course->enddate) : '';
         $content .= html_writer::end_tag('div');
 
@@ -117,7 +117,7 @@ class theme_ddmood_core_course_renderer extends core_course_renderer
 
 require_once($CFG->dirroot . '/mod/assign/classes/output/renderer.php');
 
-class theme_ddmood_mod_assign_renderer extends mod_assign\output\renderer
+class theme_fos_space1_mod_assign_renderer extends mod_assign\output\renderer
 {
 
     /**
@@ -138,7 +138,7 @@ class theme_ddmood_mod_assign_renderer extends mod_assign\output\renderer
         $o .= "<div class='alert alert-info'>TEST</div>";
         // btn custom
         $o .= \html_writer::start_tag('button', array('type' => 'button', 'class' => 'btn btn-primary bnt-custom-exp', 'data-toggle' => 'collapse', 'data-target' => '#gscollapse', 'aria-controls' => 'gscollapse'));
-        $o .= get_string('displaysummary', 'theme_ddmood');
+        $o .= get_string('displaysummary', 'theme_fos_space1');
         $o .= \html_writer::end_tag('button');
         //-
         $o .= \html_writer::start_tag('div', array('class' => 'collapse', 'id' => 'gscollapse'));

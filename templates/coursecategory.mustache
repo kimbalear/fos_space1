@@ -14,24 +14,31 @@
                     <div class="logos">
                         <div class="logo"></div>
                     </div>
-                    <div class="title">Lorem ipsum dor</div>
+                    <div class="title">{{#str}}FosFeministaTeam, theme_fos_space1{{/str}}</div>
                 </div>
             </div>
             <div class="cta-btns">
                 <div class="cta-left">
                     <button class="btn_icon-fos">
                         <div class="icon-blog"></div>
-                        <span>Community</span>
+                        <span>{{#str}}Community, theme_fos_space1{{/str}}</span>
                     </button>
                 </div>
                 <div class="cta-right">
                     <button class="btn_icon-fos">
                         <div class="icon-lab"></div>
-                        <span>Knowledge Sharing</span>
+                        <span>{{#str}}KnowledgeSharing, theme_fos_space1{{/str}}</span>
                     </button>
                 </div>
             </div>
-            <div class="content-category">{{{contentcategory}}}</div>
+            <div class="content-category">
+                {{#secondarymoremenu}}
+                <div class="secondary-navigation d-print-none ktt-secondary-navigation">
+                    {{> core/moremenu}}
+                </div>
+                {{/secondarymoremenu}}
+                {{{contentcategory}}}
+            </div>
         </div>
     </div>
     {{> theme_boost/footer }}

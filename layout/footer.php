@@ -37,7 +37,7 @@ $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'addblockbutton' => $addblockbutton,
-    'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_ddmood')
+    'logofooter' => $OUTPUT->image_url('FOSlogo-footer', 'theme_fos_space1')
 ];
 
 echo $OUTPUT->render_from_template('theme_boost/drawers', $templatecontext);
