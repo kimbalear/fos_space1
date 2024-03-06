@@ -10,8 +10,8 @@ if (isloggedin() && !isguestuser()) {
     // Add block button in editing mode.
     $addblockbutton = $OUTPUT->addblockbutton();
 
-    user_preference_allow_ajax_update('drawer-open-index', PARAM_BOOL);
-    user_preference_allow_ajax_update('drawer-open-block', PARAM_BOOL);
+    //user_preference_allow_ajax_update('drawer-open-index', PARAM_BOOL);
+    //user_preference_allow_ajax_update('drawer-open-block', PARAM_BOOL);
 
     if (defined('BEHAT_SITE_RUNNING')) {
         $blockdraweropen = true;
