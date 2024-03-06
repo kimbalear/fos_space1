@@ -11,6 +11,7 @@ if (isloggedin() && !isguestuser()) {
     require_once($CFG->dirroot . '/cohort/lib.php');
 
     $cohorts = new stdClass();
+    $categories = new stdClass();
 
     if ($USER->id !== 0) {
         $cohortids = array();
@@ -20,13 +21,20 @@ if (isloggedin() && !isguestuser()) {
             $cohortIdentifier = $cohort->idnumber;
             $cohorts->$cohortIdentifier = $cohortIdentifier;
         }
+
+        $systemCategories = $DB->get_records('course_categories');
+        
+        foreach ($systemCategories as $category){
+            $categoryIdentifier = $category->idnumber;
+            $categories->$categoryIdentifier = $category->id;
+        }
     }
 
     // Add block button in editing mode.
     $addblockbutton = $OUTPUT->addblockbutton();
 
-    user_preference_allow_ajax_update('drawer-open-index', PARAM_BOOL);
-    user_preference_allow_ajax_update('drawer-open-block', PARAM_BOOL);
+    //user_preference_allow_ajax_update('drawer-open-index', PARAM_BOOL);
+    //user_preference_allow_ajax_update('drawer-open-block', PARAM_BOOL);
 
     if (isloggedin()) {
         $courseindexopen = (get_user_preferences('drawer-open-index', true) == true);
@@ -95,6 +103,7 @@ if (isloggedin() && !isguestuser()) {
             'usermenu' => $primarymenu['user'],
             'langmenu' => $primarymenu['lang'],
             'cohorts' => $cohorts,
+            'categories' => $categories,
             'forceblockdraweropen' => $forceblockdraweropen,
             'regionmainsettingsmenu' => $regionmainsettingsmenu,
             'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
