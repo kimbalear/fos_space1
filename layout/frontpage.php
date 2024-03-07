@@ -1,5 +1,5 @@
 <?php
-global $USER;
+global $USER, $DB;
 
 if (isloggedin() && !isguestuser()) {
     defined('MOODLE_INTERNAL') || die();
@@ -11,6 +11,7 @@ if (isloggedin() && !isguestuser()) {
     require_once($CFG->dirroot . '/cohort/lib.php');
 
     $cohorts = new stdClass();
+    $categories = new stdClass();
 
     if ($USER->id !== 0) {
         $cohortids = array();
@@ -20,13 +21,20 @@ if (isloggedin() && !isguestuser()) {
             $cohortIdentifier = $cohort->idnumber;
             $cohorts->$cohortIdentifier = $cohortIdentifier;
         }
+
+        $systemCategories = $DB->get_records('course_categories');
+        
+        foreach ($systemCategories as $category){
+            $categoryIdentifier = $category->idnumber;
+            $categories->$categoryIdentifier = $category->id;
+        }
     }
 
     // Add block button in editing mode.
     $addblockbutton = $OUTPUT->addblockbutton();
 
-    user_preference_allow_ajax_update('drawer-open-index', PARAM_BOOL);
-    user_preference_allow_ajax_update('drawer-open-block', PARAM_BOOL);
+    //user_preference_allow_ajax_update('drawer-open-index', PARAM_BOOL);
+    //user_preference_allow_ajax_update('drawer-open-block', PARAM_BOOL);
 
     if (isloggedin()) {
         $courseindexopen = (get_user_preferences('drawer-open-index', true) == true);
@@ -95,6 +103,7 @@ if (isloggedin() && !isguestuser()) {
             'usermenu' => $primarymenu['user'],
             'langmenu' => $primarymenu['lang'],
             'cohorts' => $cohorts,
+            'categories' => $categories,
             'forceblockdraweropen' => $forceblockdraweropen,
             'regionmainsettingsmenu' => $regionmainsettingsmenu,
             'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
@@ -105,13 +114,13 @@ if (isloggedin() && !isguestuser()) {
             'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_fos_space1'),
             'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_fos_space1'),
             'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_fos_space1'),
-            'i-our_FAT' => $OUTPUT->image_url('icons/fos_feminista_team', 'theme_fos_space1'),
-            'i-our_FA' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
-            'i-ISEL' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
-            'i-CI' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
+            'i-our_FAT' => $OUTPUT->image_url('icons/fos_feminista_team2', 'theme_fos_space1'),
+            'i-our_FA' => $OUTPUT->image_url('icons/our_Feminist_Alliance', 'theme_fos_space1'),
+            'i-ISEL' => $OUTPUT->image_url('icons/innovation_and_social_enterprise_lab', 'theme_fos_space1'),
+            'i-CEBA' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
             'i-CLR' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
             'i-CTN' => $OUTPUT->image_url('icons/others', 'theme_fos_space1'),
-            'i-C-CSE' => $OUTPUT->image_url('icons/others', 'theme_fos_space1')
+            'i-CCSE' => $OUTPUT->image_url('icons/others', 'theme_fos_space1')
 
     ];
 
