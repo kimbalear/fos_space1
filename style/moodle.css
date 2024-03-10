@@ -497,6 +497,14 @@ h5 {
   align-item_customs: stretch;
   grid-template-areas: "field cta" "value value" "description description";
 }
+.custom_form .item_custom .cnt_row1 .col1 .field {
+  grid-area: field;
+}
+.custom_form .item_custom .cnt_row1 .col1 .field h6 {
+  margin-left: 24px;
+  font-size: 12px;
+  color: #5c3873;
+}
 .custom_form .item_custom .cnt_row1 .col1 .cta {
   align-self: center;
   grid-area: cta;
@@ -512,22 +520,18 @@ h5 {
 .custom_form .item_custom .cnt_row1 .col1 .cta .up {
   background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
 }
-.custom_form .item_custom .cnt_row1 .col1 .description {
-  grid-area: description;
-  display: none;
-}
-.custom_form .item_custom .cnt_row1 .col1 .field {
-  grid-area: field;
-}
-.custom_form .item_custom .cnt_row1 .col1 .field h6 {
-  font-size: 12px;
-  color: #5c3873;
-}
 .custom_form .item_custom .cnt_row1 .col1 .value {
   grid-area: value;
 }
 .custom_form .item_custom .cnt_row1 .col1 .value input {
-  width: 95% !important;
+  width: calc(100% - 24px) !important;
+}
+.custom_form .item_custom .cnt_row1 .col1 .description {
+  grid-area: description;
+  display: none;
+  background-color: #DDD3E1;
+  color: #5c3873;
+  padding-left: 24px;
 }
 .custom_form .item_custom .cnt_row1 .col2 {
   display: grid;
@@ -584,6 +588,14 @@ h5 {
   align-item_customs: stretch;
   grid-template-areas: "field cta" "value value" "description description";
 }
+.custom_form .item_custom .cnt_row2 .field {
+  grid-area: field;
+}
+.custom_form .item_custom .cnt_row2 .field h6 {
+  margin-left: 24px;
+  font-size: 12px;
+  color: #5c3873;
+}
 .custom_form .item_custom .cnt_row2 .cta {
   align-self: center;
   grid-area: cta;
@@ -602,13 +614,9 @@ h5 {
 .custom_form .item_custom .cnt_row2 .description {
   grid-area: description;
   display: none;
-}
-.custom_form .item_custom .cnt_row2 .field {
-  grid-area: field;
-}
-.custom_form .item_custom .cnt_row2 .field h6 {
-  font-size: 12px;
+  background-color: #DDD3E1;
   color: #5c3873;
+  padding-left: 24px;
 }
 .custom_form .item_custom .cnt_row2 .value {
   grid-area: value;
