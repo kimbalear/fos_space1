@@ -32,7 +32,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -91,7 +91,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -147,7 +147,7 @@
       align-item_customs: stretch;
       grid-template-areas:
         "field cta"
-        "value cta"
+        "value value"
         "description description";
 
       .cta {
@@ -189,32 +189,33 @@
         .d-inline-flex {
           display: inline-flex !important;
           .mod-data-input {
-            .mod-data-input {
-              .editor_atto {
-                div.editor_atto_toolbar {
-                  visibility: hidden;
-                  height: 0;
-                  display: none !important;
-                }
+            .editor_atto {
+              div.editor_atto_toolbar {
+                visibility: hidden;
+                height: 0;
+                display: none !important;
+              }
 
-                .editor_atto_content_wrap {
-                  .editor_atto_content.form-control {
-                    width: 69em !important;
-                    min-height: 4em;
-                    border-top: 1px solid $primary;
-                    border-top-left-radius: 0.5rem;
-                    border-top-right-radius: 0.5rem;
-                    resize: none !important;
-                    overflow-x: hidden;
-                  }
+              .editor_atto_content_wrap {
+                .editor_atto_content.form-control {
+                  width: 69em !important;
+                  min-height: 4em;
+                  border-top: 1px solid $primary;
+                  border-top-left-radius: 0.5rem;
+                  border-top-right-radius: 0.5rem;
+                  resize: none !important;
+                  overflow-x: hidden;
                 }
               }
+            }
+            select {
+              visibility: hidden;
             }
           }
         }
 
         input {
-          width: 97%;
+          width: 99% !important;
         }
       }
     }
@@ -233,7 +234,7 @@
       align-item_customs: stretch;
       grid-template-areas:
         "field cta"
-        "value cta"
+        "value value"
         "description description";
 
       .cta {
@@ -303,7 +304,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -362,7 +363,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -421,7 +422,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -481,7 +482,7 @@
       align-item_customs: stretch;
       grid-template-areas:
         "field cta"
-        "value cta"
+        "value value"
         "description description";
 
       .cta {
@@ -541,7 +542,7 @@
       align-item_customs: stretch;
       grid-template-areas:
         "field cta"
-        "value cta"
+        "value value"
         "description description";
 
       .cta {
@@ -628,7 +629,7 @@
       align-item_customs: stretch;
       grid-template-areas:
         "field cta"
-        "value cta"
+        "value value"
         "description description";
 
       .cta {
@@ -715,7 +716,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -770,7 +771,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -825,7 +826,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {
@@ -880,7 +881,7 @@
         align-item_customs: stretch;
         grid-template-areas:
           "field cta"
-          "value cta"
+          "value value"
           "description description";
 
         .cta {

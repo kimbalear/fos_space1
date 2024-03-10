@@ -495,7 +495,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row1 .col1 .cta {
   align-self: center;
@@ -540,7 +540,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row1 .col2 .cta {
   align-self: center;
@@ -582,7 +582,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row2 .cta {
   align-self: center;
@@ -616,12 +616,12 @@ h5 {
 .custom_form .item_custom .cnt_row2 .value .d-inline-flex {
   display: inline-flex !important;
 }
-.custom_form .item_custom .cnt_row2 .value .d-inline-flex .mod-data-input .mod-data-input .editor_atto div.editor_atto_toolbar {
+.custom_form .item_custom .cnt_row2 .value .d-inline-flex .mod-data-input .editor_atto div.editor_atto_toolbar {
   visibility: hidden;
   height: 0;
   display: none !important;
 }
-.custom_form .item_custom .cnt_row2 .value .d-inline-flex .mod-data-input .mod-data-input .editor_atto .editor_atto_content_wrap .editor_atto_content.form-control {
+.custom_form .item_custom .cnt_row2 .value .d-inline-flex .mod-data-input .editor_atto .editor_atto_content_wrap .editor_atto_content.form-control {
   width: 69em !important;
   min-height: 4em;
   border-top: 1px solid #5c3873;
@@ -630,8 +630,11 @@ h5 {
   resize: none !important;
   overflow-x: hidden;
 }
+.custom_form .item_custom .cnt_row2 .value .d-inline-flex .mod-data-input select {
+  visibility: hidden;
+}
 .custom_form .item_custom .cnt_row2 .value input {
-  width: 97%;
+  width: 99% !important;
 }
 .custom_form .item_custom .cnt_row3 {
   display: grid;
@@ -644,7 +647,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row3 .cta {
   align-self: center;
@@ -699,7 +702,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row4 .col1 .cta {
   align-self: center;
@@ -744,7 +747,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row4 .col2 .cta {
   align-self: center;
@@ -789,7 +792,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row4 .col3 .cta {
   align-self: center;
@@ -834,7 +837,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row5 .cta {
   align-self: center;
@@ -881,7 +884,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row6 .cta {
   align-self: center;
@@ -946,7 +949,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row7 .cta {
   align-self: center;
@@ -1013,7 +1016,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row8 .col1 .cta {
   align-self: center;
@@ -1055,7 +1058,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row8 .col2 .cta {
   align-self: center;
@@ -1097,7 +1100,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row8 .col3 .cta {
   align-self: center;
@@ -1139,7 +1142,7 @@ h5 {
   align-content: stretch;
   justify-item_customs: stretch;
   align-item_customs: stretch;
-  grid-template-areas: "field cta" "value cta" "description description";
+  grid-template-areas: "field cta" "value value" "description description";
 }
 .custom_form .item_custom .cnt_row8 .col4 .cta {
   align-self: center;
