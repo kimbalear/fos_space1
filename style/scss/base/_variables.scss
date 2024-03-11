@@ -1128,4 +1128,5 @@ $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
 $scrollbar-track-color: $navbar-bg;
 $scrollbar-thumb-color: $primary;
 $scrollbar-thumb-hover-color: $primary;
-$scrollbar-thumb-width: 6px;
+$scrollbar-track-color: $body-bg;
+$scrollbar-thumb-width: 12px;

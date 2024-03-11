@@ -1083,6 +1083,9 @@ h5 {
 .custom_form .item_custom .cnt_row7 .value .form-inline table tbody td input {
   width: 100%;
 }
+.custom_form .item_custom .cnt_row7 .value .form-inline table tbody tr td:first-child {
+  width: 60px;
+}
 .custom_form .item_custom .cnt_row7 .description-cont {
   grid-area: description-cont;
   display: none;
@@ -1322,13 +1325,6 @@ h5 {
 }
 .custom_form .item_custom .cnt_row8 .dndupload-arrow {
   height: 50px;
-}
-
-.limit-text {
-  width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .navbar.fixed-top {
@@ -5877,23 +5873,6 @@ body #page-wrapper #page #region-main {
 
 #page.drawers {
   margin-top: 38px !important;
-}
-
-::-webkit-scrollbar {
-  width: 6px !important;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5 !important;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #c0c0c0 !important;
-  border-radius: 3px !important;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #a0a0a0;
 }
 
 /*# sourceMappingURL=moodle.css.map */

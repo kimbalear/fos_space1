@@ -778,6 +778,11 @@
                   width: 100%;
                 }
               }
+              tr {
+                td:first-child {
+                  width: 60px;
+                }
+              }
             }
           }
         }
@@ -1083,10 +1088,4 @@
       }
     }
   }
-}
-.limit-text {
-  width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
