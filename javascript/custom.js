@@ -86,13 +86,5 @@ require(["jquery"], function ($) {
         $(this).find("div").removeClass("down").addClass("up");
       }
     });
-
-    $('.col1 .field .value input').on('input', function() {
-      var texto = $(this).val();
-      if (texto.length > 100) {
-        $(this).val(texto.substr(0, 100));
-      }
-    })
-
   });
 });
