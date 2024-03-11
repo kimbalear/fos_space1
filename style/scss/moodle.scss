@@ -290,24 +290,26 @@ body {
   margin-top: 38px !important;
 }
 
+$scrollbar-track-color: #f5f5f5;
+$scrollbar-thumb-color: #c0c0c0;
+$scrollbar-thumb-hover-color: #a0a0a0;
+$scrollbar-thumb-width: 6px;
+
+
 //scroolbar
-/* Estilo base de la scrollbar */
 ::-webkit-scrollbar {
-  width: $scrollbar-thumb-width;
+  width: $scrollbar-thumb-width!important;
 }
 
-/* Estilo del track (barra de fondo) */
 ::-webkit-scrollbar-track {
-  background-color: $scrollbar-track-color;
+  background-color: $scrollbar-track-color!important;
 }
 
-/* Estilo del thumb (barra deslizante) */
 ::-webkit-scrollbar-thumb {
-  background-color: $scrollbar-thumb-color;
-  border-radius: 3px;
+  background-color: $scrollbar-thumb-color!important;
+  border-radius: 3px!important;
 }
 
-/* Estilo del thumb al pasar el cursor */
 ::-webkit-scrollbar-thumb:hover {
   background-color: $scrollbar-thumb-hover-color;
 }

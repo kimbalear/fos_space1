@@ -4,7 +4,7 @@
   grid-auto-rows: auto;
   gap: 4px;
   overflow-y: auto;
-  padding-right: 10px;
+  overflow-x: hidden;
 
   .item_custom {
     padding: 4px 0px;
@@ -209,20 +209,18 @@
       .value {
         grid-area: value;
 
-        .d-inline-flex {
-          display: inline-flex !important;
+        div {
+          width: 100%;
           .mod-data-input {
-            .editor_atto {
-              div.editor_atto_toolbar {
-                visibility: hidden;
-                height: 0;
-                display: none !important;
-              }
-
-              .editor_atto_content_wrap {
-                .editor_atto_content.form-control {
-                  width: 69em !important;
-                  min-height: 4em;
+            > div:first-child {
+              .editor_atto {
+                .editor_atto_toolbar {
+                  visibility: hidden;
+                  height: 0;
+                  display: none !important;
+                }
+                .editor_atto_content_wrap {
+                  width: 100% !important;
                   border-top: 1px solid $primary;
                   border-top-left-radius: 0.5rem;
                   border-top-right-radius: 0.5rem;
@@ -231,7 +229,8 @@
                 }
               }
             }
-            div {
+
+            > div:nth-child(2) {
               visibility: hidden;
               height: 0;
             }
@@ -415,47 +414,47 @@
           "value value"
           "description-cont description-cont";
 
-          .field {
-            grid-area: field;
-  
-            h6 {
-              margin-left: 24px;
-              font-size: 12px;
-              color: $primary;
-            }
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
           }
-  
-          .cta {
-            align-self: center;
-            grid-area: cta;
-  
-            .i-arrow {
-              width: 18px;
-              height: 18px;
-              cursor: pointer;
-            }
-  
-            .down {
-              background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_472)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M12.4425 6.4425L9 9.8775L5.5575 6.4425L4.5 7.5L9 12L13.5 7.5L12.4425 6.4425Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_472"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
-            }
-  
-            .up {
-              background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
-            }
+        }
+
+        .cta {
+          align-self: center;
+          grid-area: cta;
+
+          .i-arrow {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
           }
-  
-          .description {
-            grid-area: description;
-            display: none;
+
+          .down {
+            background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_472)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M12.4425 6.4425L9 9.8775L5.5575 6.4425L4.5 7.5L9 12L13.5 7.5L12.4425 6.4425Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_472"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
           }
-  
-          .value {
-            grid-area: value;
-  
-            select {
-              width: calc(100% - 24px) !important;
-            }
+
+          .up {
+            background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
           }
+        }
+
+        .description {
+          grid-area: description;
+          display: none;
+        }
+
+        .value {
+          grid-area: value;
+
+          select {
+            width: calc(100% - 24px) !important;
+          }
+        }
       }
 
       // Author
@@ -577,11 +576,27 @@
       .value {
         grid-area: value;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
         gap: 0.5rem;
         justify-content: center;
         justify-items: start;
-        padding-left: 24px;
+
+        > div:first-child {
+          //title
+          .inline-req {
+            width: 24px;
+            float: left;
+          }
+
+          input[type="checkbox"]:nth-of-type(n + 3) {
+            margin-left: 24px;
+          }
+        }
+        > div:nth-child(2) {
+          input[type="checkbox"] {
+            margin-left: 0px;
+          }
+        }
       }
 
       .description-cont {
@@ -647,21 +662,20 @@
 
       .value {
         grid-area: value;
+        padding-left: 24px;
 
-        .d-inline-flex {
-          display: inline-flex !important;
+        div {
+          width: 100%;
           .mod-data-input {
-            .editor_atto {
-              div.editor_atto_toolbar {
-                visibility: hidden;
-                height: 0;
-                display: none !important;
-              }
-
-              .editor_atto_content_wrap {
-                .editor_atto_content.form-control {
-                  width: 69em !important;
-                  min-height: 4em;
+            > div:first-child {
+              .editor_atto {
+                .editor_atto_toolbar {
+                  visibility: hidden;
+                  height: 0;
+                  display: none !important;
+                }
+                .editor_atto_content_wrap {
+                  width: 100% !important;
                   border-top: 1px solid $primary;
                   border-top-left-radius: 0.5rem;
                   border-top-right-radius: 0.5rem;
@@ -670,7 +684,8 @@
                 }
               }
             }
-            select {
+
+            > div:nth-child(2) {
               visibility: hidden;
               height: 0;
             }
@@ -749,8 +764,9 @@
         .form-inline {
           table {
             border-collapse: collapse;
-
+            margin: 0;
             width: 100%;
+            table-layout: auto;
 
             tbody {
               border-collapse: collapse;

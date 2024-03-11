@@ -1123,3 +1123,9 @@ $user-selects: all, auto, none !default;
 
 $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+
+// scrollbar
+$scrollbar-track-color: $navbar-bg;
+$scrollbar-thumb-color: $primary;
+$scrollbar-thumb-hover-color: $primary;
+$scrollbar-thumb-width: 6px;
