@@ -289,3 +289,25 @@ body {
 #page.drawers {
   margin-top: 38px !important;
 }
+
+//scroolbar
+/* Estilo base de la scrollbar */
+::-webkit-scrollbar {
+  width: $scrollbar-thumb-width;
+}
+
+/* Estilo del track (barra de fondo) */
+::-webkit-scrollbar-track {
+  background-color: $scrollbar-track-color;
+}
+
+/* Estilo del thumb (barra deslizante) */
+::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb-color;
+  border-radius: 3px;
+}
+
+/* Estilo del thumb al pasar el cursor */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $scrollbar-thumb-hover-color;
+}

@@ -75,15 +75,15 @@ require(["jquery"], function ($) {
 
     // add entry
     $(".cta").click(function () {
-      var description = $(this).parent().find(".description");
+      var description = $(this).parent().find(".description-cont");
       var isVisible = description.is(":visible");
 
       if (isVisible) {
         description.hide();
-        $(this).removeClass("up").addClass("down");
+        $(this).find("div").removeClass("up").addClass("down");
       } else {
         description.show();
-        $(this).removeClass("down").addClass("up");
+        $(this).find("div").removeClass("down").addClass("up");
       }
     });
   });

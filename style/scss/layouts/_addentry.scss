@@ -3,9 +3,13 @@
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   gap: 4px;
+  overflow-y: auto;
+  padding-right: 10px;
 
   .item_custom {
-    padding: 8px;
+    padding: 4px 0px;
+    display: list-item;
+    list-style: none;
 
     // Title & Upload date
     .cnt_row1 {
@@ -24,7 +28,7 @@
         grid-template-columns: 1fr auto;
         grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -33,7 +37,7 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
 
         .field {
           grid-area: field;
@@ -72,12 +76,18 @@
           }
         }
 
-        .description {
-          grid-area: description;
+        .description-cont {
+          grid-area: description-cont;
           display: none;
-          background-color: $navbar-bg;
-          color: $primary;
           padding-left: 24px;
+          .description {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            padding: 4px 8px;
+            background-color: $navbar-bg;
+            color: $primary;
+          }
         }
       }
 
@@ -87,7 +97,7 @@
         grid-template-columns: 1fr auto;
         grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -96,7 +106,17 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
+
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
 
         .cta {
           align-self: center;
@@ -117,22 +137,25 @@
           }
         }
 
-        .description {
-          grid-area: description;
-          display: none;
-        }
-
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
+        .value {
+          grid-area: value;
+          .form-inline {
+            gap: 8px;
           }
         }
 
-        .value {
-          grid-area: value;
+        .description-cont {
+          grid-area: description-cont;
+          display: none;
+          padding-left: 24px;
+          .description {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            padding: 4px 8px;
+            background-color: $navbar-bg;
+            color: $primary;
+          }
         }
       }
     }
@@ -141,9 +164,9 @@
     .cnt_row2 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px 110px auto;
+      grid-template-rows: 18px auto auto;
       grid-auto-columns: 1fr;
-      gap: 0px 8px;
+      gap: 4px 4px;
       grid-auto-flow: row;
       justify-content: stretch;
       align-content: stretch;
@@ -152,7 +175,7 @@
       grid-template-areas:
         "field cta"
         "value value"
-        "description description";
+        "description-cont description-cont";
 
       .field {
         grid-area: field;
@@ -183,14 +206,6 @@
         }
       }
 
-      .description {
-        grid-area: description;
-        display: none;
-        background-color: $navbar-bg;
-        color: $primary;
-        padding-left: 24px;
-      }
-
       .value {
         grid-area: value;
 
@@ -216,14 +231,29 @@
                 }
               }
             }
-            select {
+            div {
               visibility: hidden;
+              height: 0;
             }
           }
         }
 
         input {
-          width: 99% !important;
+          width: calc(100% - 24px) !important;
+        }
+      }
+
+      .description-cont {
+        grid-area: description-cont;
+        display: none;
+        padding-left: 24px;
+        .description {
+          width: 100%;
+          height: 100%;
+          border-radius: $border-radius;
+          padding: 4px 8px;
+          background-color: $navbar-bg;
+          color: $primary;
         }
       }
     }
@@ -234,7 +264,7 @@
       grid-template-columns: 1fr auto;
       grid-template-rows: 18px 36.47px auto;
       grid-auto-columns: 1fr;
-      gap: 0px 8px;
+      gap: 4px 4px;
       grid-auto-flow: row;
       justify-content: stretch;
       align-content: stretch;
@@ -243,7 +273,17 @@
       grid-template-areas:
         "field cta"
         "value value"
-        "description description";
+        "description-cont description-cont";
+
+      .field {
+        grid-area: field;
+
+        h6 {
+          margin-left: 24px;
+          font-size: 12px;
+          color: $primary;
+        }
+      }
 
       .cta {
         align-self: center;
@@ -264,25 +304,25 @@
         }
       }
 
-      .description {
-        grid-area: description;
-        display: none;
-      }
-
-      .field {
-        grid-area: field;
-
-        h6 {
-          font-size: 12px;
-          color: $primary;
-        }
-      }
-
       .value {
         grid-area: value;
 
         select {
-          width: 97%;
+          width: calc(100% - 24px) !important;
+        }
+      }
+
+      .description-cont {
+        grid-area: description-cont;
+        display: none;
+        padding-left: 24px;
+        .description {
+          width: 100%;
+          height: 100%;
+          border-radius: $border-radius;
+          padding: 4px 8px;
+          background-color: $navbar-bg;
+          color: $primary;
         }
       }
     }
@@ -304,7 +344,7 @@
         grid-template-columns: 1fr auto;
         grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -313,7 +353,17 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
+
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
 
         .cta {
           align-self: center;
@@ -339,20 +389,11 @@
           display: none;
         }
 
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
-          }
-        }
-
         .value {
           grid-area: value;
 
           select {
-            width: 80%;
+            width: calc(100% - 24px) !important;
           }
         }
       }
@@ -363,7 +404,7 @@
         grid-template-columns: 1fr auto;
         grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -372,48 +413,49 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
 
-        .cta {
-          align-self: center;
-          grid-area: cta;
-
-          .i-arrow {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
+          .field {
+            grid-area: field;
+  
+            h6 {
+              margin-left: 24px;
+              font-size: 12px;
+              color: $primary;
+            }
           }
-
-          .down {
-            background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_472)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M12.4425 6.4425L9 9.8775L5.5575 6.4425L4.5 7.5L9 12L13.5 7.5L12.4425 6.4425Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_472"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
+  
+          .cta {
+            align-self: center;
+            grid-area: cta;
+  
+            .i-arrow {
+              width: 18px;
+              height: 18px;
+              cursor: pointer;
+            }
+  
+            .down {
+              background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_472)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M12.4425 6.4425L9 9.8775L5.5575 6.4425L4.5 7.5L9 12L13.5 7.5L12.4425 6.4425Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_472"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
+            }
+  
+            .up {
+              background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
+            }
           }
-
-          .up {
-            background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
+  
+          .description {
+            grid-area: description;
+            display: none;
           }
-        }
-
-        .description {
-          grid-area: description;
-          display: none;
-        }
-
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
+  
+          .value {
+            grid-area: value;
+  
+            select {
+              width: calc(100% - 24px) !important;
+            }
           }
-        }
-
-        .value {
-          grid-area: value;
-
-          select {
-            width: 80%;
-          }
-        }
       }
 
       // Author
@@ -422,7 +464,7 @@
         grid-template-columns: 1fr auto;
         grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -431,7 +473,17 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
+
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
 
         .cta {
           align-self: center;
@@ -452,25 +504,25 @@
           }
         }
 
-        .description {
-          grid-area: description;
-          display: none;
-        }
-
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
-          }
-        }
-
         .value {
           grid-area: value;
 
           input {
-            width: 95%;
+            width: calc(100% - 24px) !important;
+          }
+        }
+
+        .description-cont {
+          grid-area: description-cont;
+          display: none;
+          padding-left: 24px;
+          .description {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            padding: 4px 8px;
+            background-color: $navbar-bg;
+            color: $primary;
           }
         }
       }
@@ -482,7 +534,7 @@
       grid-template-columns: 1fr auto;
       grid-template-rows: 18px auto auto;
       grid-auto-columns: 1fr;
-      gap: 0px 8px;
+      gap: 4px 4px;
       grid-auto-flow: row;
       justify-content: stretch;
       align-content: stretch;
@@ -491,7 +543,17 @@
       grid-template-areas:
         "field cta"
         "value value"
-        "description description";
+        "description-cont description-cont";
+
+      .field {
+        grid-area: field;
+
+        h6 {
+          margin-left: 24px;
+          font-size: 12px;
+          color: $primary;
+        }
+      }
 
       .cta {
         align-self: center;
@@ -509,20 +571,6 @@
 
         .up {
           background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
-        }
-      }
-
-      .description {
-        grid-area: description;
-        display: none;
-      }
-
-      .field {
-        grid-area: field;
-
-        h6 {
-          font-size: 12px;
-          color: $primary;
         }
       }
 
@@ -533,6 +581,21 @@
         gap: 0.5rem;
         justify-content: center;
         justify-items: start;
+        padding-left: 24px;
+      }
+
+      .description-cont {
+        grid-area: description-cont;
+        display: none;
+        padding-left: 24px;
+        .description {
+          width: 100%;
+          height: 100%;
+          border-radius: $border-radius;
+          padding: 4px 8px;
+          background-color: $navbar-bg;
+          color: $primary;
+        }
       }
     }
 
@@ -540,9 +603,9 @@
     .cnt_row6 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px 110px auto;
+      grid-template-rows: 18px auto auto;
       grid-auto-columns: 1fr;
-      gap: 0px 8px;
+      gap: 4px 4px;
       grid-auto-flow: row;
       justify-content: stretch;
       align-content: stretch;
@@ -551,7 +614,17 @@
       grid-template-areas:
         "field cta"
         "value value"
-        "description description";
+        "description-cont description-cont";
+
+      .field {
+        grid-area: field;
+
+        h6 {
+          margin-left: 24px;
+          font-size: 12px;
+          color: $primary;
+        }
+      }
 
       .cta {
         align-self: center;
@@ -569,20 +642,6 @@
 
         .up {
           background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
-        }
-      }
-
-      .description {
-        grid-area: description;
-        display: none;
-      }
-
-      .field {
-        grid-area: field;
-
-        h6 {
-          font-size: 12px;
-          color: $primary;
         }
       }
 
@@ -613,12 +672,27 @@
             }
             select {
               visibility: hidden;
+              height: 0;
             }
           }
         }
 
         input {
-          width: 99% !important;
+          width: calc(100% - 24px) !important;
+        }
+      }
+
+      .description-cont {
+        grid-area: description-cont;
+        display: none;
+        padding-left: 24px;
+        .description {
+          width: 100%;
+          height: 100%;
+          border-radius: $border-radius;
+          padding: 4px 8px;
+          background-color: $navbar-bg;
+          color: $primary;
         }
       }
     }
@@ -629,7 +703,7 @@
       grid-template-columns: 1fr auto;
       grid-template-rows: 18px auto auto;
       grid-auto-columns: 1fr;
-      gap: 0px 8px;
+      gap: 4px 4px;
       grid-auto-flow: row;
       justify-content: stretch;
       align-content: stretch;
@@ -638,7 +712,17 @@
       grid-template-areas:
         "field cta"
         "value value"
-        "description description";
+        "description-cont description-cont";
+
+      .field {
+        grid-area: field;
+
+        h6 {
+          margin-left: 24px;
+          font-size: 12px;
+          color: $primary;
+        }
+      }
 
       .cta {
         align-self: center;
@@ -656,20 +740,6 @@
 
         .up {
           background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_402_489)"><rect width="18" height="18" rx="9" fill="%23383D47" fill-opacity="0.35"/><path d="M9 6L4.5 10.5L5.5575 11.5575L9 8.1225L12.4425 11.5575L13.5 10.5L9 6Z" fill="%23F9F2EA"/></g><defs><clipPath id="clip0_402_489"><rect width="18" height="18" rx="9" fill="white"/></clipPath></defs></svg>');
-        }
-      }
-
-      .description {
-        grid-area: description;
-        display: none;
-      }
-
-      .field {
-        grid-area: field;
-
-        h6 {
-          font-size: 12px;
-          color: $primary;
         }
       }
 
@@ -697,6 +767,20 @@
           }
         }
       }
+
+      .description-cont {
+        grid-area: description-cont;
+        display: none;
+        padding-left: 24px;
+        .description {
+          width: 100%;
+          height: 100%;
+          border-radius: $border-radius;
+          padding: 4px 8px;
+          background-color: $navbar-bg;
+          color: $primary;
+        }
+      }
     }
 
     // Files
@@ -714,9 +798,9 @@
       .col1 {
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: 12px auto auto;
+        grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -725,7 +809,17 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
+
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
 
         .cta {
           align-self: center;
@@ -746,22 +840,22 @@
           }
         }
 
-        .description {
-          grid-area: description;
-          display: none;
-        }
-
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
-          }
-        }
-
         .value {
           grid-area: value;
+        }
+
+        .description-cont {
+          grid-area: description-cont;
+          display: none;
+          padding-left: 24px;
+          .description {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            padding: 4px 8px;
+            background-color: $navbar-bg;
+            color: $primary;
+          }
         }
       }
 
@@ -769,9 +863,9 @@
       .col2 {
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: 12px auto auto;
+        grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -780,7 +874,17 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
+
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
 
         .cta {
           align-self: center;
@@ -801,22 +905,22 @@
           }
         }
 
-        .description {
-          grid-area: description;
-          display: none;
-        }
-
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
-          }
-        }
-
         .value {
           grid-area: value;
+        }
+
+        .description-cont {
+          grid-area: description-cont;
+          display: none;
+          padding-left: 24px;
+          .description {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            padding: 4px 8px;
+            background-color: $navbar-bg;
+            color: $primary;
+          }
         }
       }
 
@@ -824,9 +928,9 @@
       .col3 {
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: 12px auto auto;
+        grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -835,7 +939,17 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
+
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
 
         .cta {
           align-self: center;
@@ -856,22 +970,22 @@
           }
         }
 
-        .description {
-          grid-area: description;
-          display: none;
-        }
-
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
-          }
-        }
-
         .value {
           grid-area: value;
+        }
+
+        .description-cont {
+          grid-area: description-cont;
+          display: none;
+          padding-left: 24px;
+          .description {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            padding: 4px 8px;
+            background-color: $navbar-bg;
+            color: $primary;
+          }
         }
       }
 
@@ -879,9 +993,9 @@
       .col4 {
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: 12px auto auto;
+        grid-template-rows: 18px 36.47px auto;
         grid-auto-columns: 1fr;
-        gap: 0px 8px;
+        gap: 4px 4px;
         grid-auto-flow: row;
         justify-content: stretch;
         align-content: stretch;
@@ -890,7 +1004,17 @@
         grid-template-areas:
           "field cta"
           "value value"
-          "description description";
+          "description-cont description-cont";
+
+        .field {
+          grid-area: field;
+
+          h6 {
+            margin-left: 24px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
 
         .cta {
           align-self: center;
@@ -911,22 +1035,22 @@
           }
         }
 
-        .description {
-          grid-area: description;
-          display: none;
-        }
-
-        .field {
-          grid-area: field;
-
-          h6 {
-            font-size: 12px;
-            color: $primary;
-          }
-        }
-
         .value {
           grid-area: value;
+        }
+
+        .description-cont {
+          grid-area: description-cont;
+          display: none;
+          padding-left: 24px;
+          .description {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            padding: 4px 8px;
+            background-color: $navbar-bg;
+            color: $primary;
+          }
         }
       }
 
