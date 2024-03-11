@@ -560,7 +560,6 @@ h5 {
   grid-area: field;
 }
 .custom_form .item_custom .cnt_row1 .col2 .field h6 {
-  margin-left: 24px;
   font-size: 12px;
   color: #5c3873;
 }
@@ -1124,7 +1123,6 @@ h5 {
   grid-area: field;
 }
 .custom_form .item_custom .cnt_row8 .col1 .field h6 {
-  margin-left: 24px;
   font-size: 12px;
   color: #5c3873;
 }
@@ -1176,7 +1174,6 @@ h5 {
   grid-area: field;
 }
 .custom_form .item_custom .cnt_row8 .col2 .field h6 {
-  margin-left: 24px;
   font-size: 12px;
   color: #5c3873;
 }
@@ -1228,7 +1225,6 @@ h5 {
   grid-area: field;
 }
 .custom_form .item_custom .cnt_row8 .col3 .field h6 {
-  margin-left: 24px;
   font-size: 12px;
   color: #5c3873;
 }
@@ -1280,7 +1276,6 @@ h5 {
   grid-area: field;
 }
 .custom_form .item_custom .cnt_row8 .col4 .field h6 {
-  margin-left: 24px;
   font-size: 12px;
   color: #5c3873;
 }
@@ -5623,6 +5618,10 @@ a.ygtvspacer:hover {
 
 .pw-custom {
   background-color: #f3eff5 !important;
+}
+
+.header-maxwidth {
+  max-width: 100% !important;
 }
 
 .coursesearchbox {
