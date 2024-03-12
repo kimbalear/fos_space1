@@ -74,6 +74,12 @@
           input {
             width: calc(100% - 24px) !important;
           }
+          .alert {
+            position: absolute;
+            top: 3px;
+            left: 28px;
+            padding: 4px 8px;
+          }
         }
 
         .description-cont {
@@ -163,7 +169,7 @@
     .cnt_row2 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px auto auto;
+      grid-template-rows: 18px repeat(2, auto);
       grid-auto-columns: 1fr;
       gap: 4px 4px;
       grid-auto-flow: row;
@@ -260,7 +266,7 @@
     .cnt_row3 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px 36.47px auto;
+      grid-template-rows: 18px repeat(2, auto);
       grid-auto-columns: 1fr;
       gap: 4px 4px;
       grid-auto-flow: row;
@@ -329,7 +335,7 @@
     .cnt_row4 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px 36.47px auto;
+      grid-template-rows: 18px repeat(2, auto);
       grid-auto-columns: 1fr;
       gap: 4px 4px;
       grid-auto-flow: row;
@@ -548,7 +554,7 @@
     .cnt_row6 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px auto auto;
+      grid-template-rows: 18px repeat(2, auto);
       grid-auto-columns: 1fr;
       gap: 4px 4px;
       grid-auto-flow: row;
@@ -635,7 +641,7 @@
     .cnt_row7 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px auto auto;
+      grid-template-rows: 18px repeat(2, auto);
       grid-auto-columns: 1fr;
       gap: 4px 4px;
       grid-auto-flow: row;
@@ -679,7 +685,7 @@
 
       .value {
         grid-area: value;
-        padding-left: 24px;
+        margin-left: 24px;
 
         div {
           width: 100%;
@@ -733,7 +739,7 @@
     .cnt_row8 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px auto auto;
+      grid-template-rows: 18px repeat(2, auto);
       grid-auto-columns: 1fr;
       gap: 4px 4px;
       grid-auto-flow: row;
@@ -825,7 +831,7 @@
     .cnt_row9 {
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: 18px auto auto;
+      grid-template-rows: 18px repeat(2, auto);
       grid-auto-columns: 1fr;
       gap: 4px 4px;
       grid-auto-flow: row;

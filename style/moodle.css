@@ -530,6 +530,12 @@ h5 {
 .custom_form .item_custom .cnt_row1 .col1 .value input {
   width: calc(100% - 24px) !important;
 }
+.custom_form .item_custom .cnt_row1 .col1 .value .alert {
+  position: absolute;
+  top: 3px;
+  left: 28px;
+  padding: 4px 8px;
+}
 .custom_form .item_custom .cnt_row1 .col1 .description-cont {
   grid-area: description-cont;
   display: none;
@@ -600,7 +606,7 @@ h5 {
 .custom_form .item_custom .cnt_row2 {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 18px auto auto;
+  grid-template-rows: 18px repeat(2, auto);
   grid-auto-columns: 1fr;
   gap: 4px 4px;
   grid-auto-flow: row;
@@ -675,7 +681,7 @@ h5 {
 .custom_form .item_custom .cnt_row3 {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 18px 36.47px auto;
+  grid-template-rows: 18px repeat(2, auto);
   grid-auto-columns: 1fr;
   gap: 4px 4px;
   grid-auto-flow: row;
@@ -730,7 +736,7 @@ h5 {
 .custom_form .item_custom .cnt_row4 {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 18px 36.47px auto;
+  grid-template-rows: 18px repeat(2, auto);
   grid-auto-columns: 1fr;
   gap: 4px 4px;
   grid-auto-flow: row;
@@ -905,7 +911,7 @@ h5 {
 .custom_form .item_custom .cnt_row6 {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 18px auto auto;
+  grid-template-rows: 18px repeat(2, auto);
   grid-auto-columns: 1fr;
   gap: 4px 4px;
   grid-auto-flow: row;
@@ -972,7 +978,7 @@ h5 {
 .custom_form .item_custom .cnt_row7 {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 18px auto auto;
+  grid-template-rows: 18px repeat(2, auto);
   grid-auto-columns: 1fr;
   gap: 4px 4px;
   grid-auto-flow: row;
@@ -1007,7 +1013,7 @@ h5 {
 }
 .custom_form .item_custom .cnt_row7 .value {
   grid-area: value;
-  padding-left: 24px;
+  margin-left: 24px;
 }
 .custom_form .item_custom .cnt_row7 .value div {
   width: 100%;
@@ -1048,7 +1054,7 @@ h5 {
 .custom_form .item_custom .cnt_row8 {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 18px auto auto;
+  grid-template-rows: 18px repeat(2, auto);
   grid-auto-columns: 1fr;
   gap: 4px 4px;
   grid-auto-flow: row;
@@ -1120,7 +1126,7 @@ h5 {
 .custom_form .item_custom .cnt_row9 {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 18px auto auto;
+  grid-template-rows: 18px repeat(2, auto);
   grid-auto-columns: 1fr;
   gap: 4px 4px;
   grid-auto-flow: row;
