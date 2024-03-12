@@ -1255,6 +1255,7 @@ h5 {
 }
 .custom_form .item_custom .cnt_row9 .value-cont .col4 .value {
   grid-area: value;
+  border: none;
 }
 .custom_form .item_custom .cnt_row9 .value-cont .btn-group {
   visibility: hidden;
@@ -1268,6 +1269,20 @@ h5 {
 }
 .custom_form .item_custom .cnt_row9 .value-cont .dndupload-arrow {
   height: 50px;
+}
+.custom_form .item_custom .cnt_row9 .value-cont .fp-navbar {
+  border-top: 1px solid #5c3873 !important;
+  border-right: 1px solid #5c3873 !important;
+  border-left: 1px solid #5c3873 !important;
+}
+.custom_form .item_custom .cnt_row9 .value-cont .filemanager-container {
+  border-right: 1px solid #5c3873 !important;
+  border-left: 1px solid #5c3873 !important;
+  border-bottom: 1px solid #5c3873 !important;
+}
+.custom_form .item_custom .cnt_row9 .value-cont .bg-faded,
+.custom_form .item_custom .cnt_row9 .value-cont .filemanager-container {
+  background-color: #fff;
 }
 .custom_form .item_custom .cnt_row9 .description-cont {
   grid-area: description-cont;

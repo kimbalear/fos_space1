@@ -995,6 +995,7 @@
 
           .value {
             grid-area: value;
+            border: none;
           }
         }
 
@@ -1013,6 +1014,20 @@
 
         .dndupload-arrow {
           height: 50px;
+        }
+        .fp-navbar {
+          border-top: 1px solid $primary !important;
+          border-right: 1px solid $primary !important;
+          border-left: 1px solid $primary !important;
+        }
+        .filemanager-container {
+          border-right: 1px solid $primary !important;
+          border-left: 1px solid $primary !important;
+          border-bottom: 1px solid $primary !important;
+        }
+        .bg-faded,
+        .filemanager-container {
+          background-color: $white;
         }
       }
 
