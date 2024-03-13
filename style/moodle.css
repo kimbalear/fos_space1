@@ -278,6 +278,9 @@ h5 {
   grid-area: menu_footer;
   align-self: center;
 }
+.fos_space1-footer .grid-footer .footer_top .menu_footer a:hover {
+  color: white;
+}
 .fos_space1-footer .grid-footer .footer_bottom {
   align-self: stretch;
   grid-area: footer_bottom;
@@ -1405,6 +1408,11 @@ h5 {
   }
   */
   font-size: 2vw;
+}
+@media (min-width: 1800px) {
+  #owl-carousel_slider {
+    font-size: 1.8vw;
+  }
 }
 #owl-carousel_slider .item {
   position: relative;
