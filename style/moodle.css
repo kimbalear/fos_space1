@@ -596,6 +596,10 @@ h5 {
 .custom_form .item_custom .cnt_row1 .col2 .value .form-inline {
   gap: 8px;
 }
+.custom_form .item_custom .cnt_row1 .col2 .value .form-inline .custom-select {
+  background: none;
+  pointer-events: none;
+}
 .custom_form .item_custom .cnt_row1 .col2 .description-cont {
   grid-area: description-cont;
   display: none;
