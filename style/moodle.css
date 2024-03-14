@@ -53,6 +53,9 @@
   transform: rotate(180deg);
 }
 
+.owl-carousel_slider {
+  font-size: 1.8vw;
+}
 /*$custom-control-indicator-checked-disabled-bg: rgba(
   theme-color("primary"),
   0.5
@@ -277,6 +280,9 @@ h5 {
 .fos_space1-footer .grid-footer .footer_top .menu_footer {
   grid-area: menu_footer;
   align-self: center;
+}
+.fos_space1-footer .grid-footer .footer_top .menu_footer a:hover {
+  color: white;
 }
 .fos_space1-footer .grid-footer .footer_bottom {
   align-self: stretch;
