@@ -301,6 +301,6 @@
 // Usando el mixin
 .owl-carousel_slider {
   @include font-size(1.8vw);
-  @include respond-to("large-desktop")
+  @include respond-to("large-desktop");
 }
 // -----------------------------------------------------
