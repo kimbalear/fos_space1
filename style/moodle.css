@@ -53,6 +53,9 @@
   transform: rotate(180deg);
 }
 
+.owl-carousel_slider {
+  font-size: 1.8vw;
+}
 /*$custom-control-indicator-checked-disabled-bg: rgba(
   theme-color("primary"),
   0.5
@@ -1443,11 +1446,6 @@ h5 {
   }
   */
   font-size: 2vw;
-}
-@media (min-width: 1800px) {
-  #owl-carousel_slider {
-    font-size: 1.8vw;
-  }
 }
 #owl-carousel_slider .item {
   position: relative;
