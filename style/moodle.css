@@ -53,9 +53,17 @@
   transform: rotate(180deg);
 }
 
-#owl-carousel_slider {
-  font-size: 1.8vw;
+/*
+@mixin font-size($font-size_owl) {
+  font-size: $font-size_owl;
 }
+*/
+/*
+#owl-carousel_slider {
+  @include font-size(1.8vw);
+  @include respond-to("up to 4K");
+}
+*/
 /*$custom-control-indicator-checked-disabled-bg: rgba(
   theme-color("primary"),
   0.5
@@ -1786,30 +1794,7 @@ h5 {
 }
 
 #owl-carousel_slider {
-  /*
-  @include font-header("Isidora Sans Medium");
-
-  @include respond-to("small-phone") {
-    font-size: 10px;
-  }
-
-  @include respond-to("phone") {
-    font-size: 11px;
-  }
-
-  @include respond-to("tablet") {
-    font-size: 1.2rem;
-  }
-
-  @include respond-to("other") {
-    font-size: 1.3rem;
-  }
-
-  @include respond-to("large-desktop") {
-    font-size: 2.2vw;
-  }
-  */
-  font-size: 2vw;
+  font-size: clamp(14px, 1.8vw, 30px);
 }
 #owl-carousel_slider .item {
   position: relative;

@@ -337,13 +337,16 @@
 }
 
 // Mixin para Font size carrousel
-@mixin font-size($size) {
-  font-size: $size;
+/*
+@mixin font-size($font-size_owl) {
+  font-size: $font-size_owl;
 }
-
+*/
 // Usando el mixin
+/*
 #owl-carousel_slider {
   @include font-size(1.8vw);
   @include respond-to("up to 4K");
 }
+*/
 // -----------------------------------------------------
