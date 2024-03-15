@@ -53,9 +53,6 @@
   transform: rotate(180deg);
 }
 
-#owl-carousel_slider {
-  font-size: 1.8vw;
-}
 /*$custom-control-indicator-checked-disabled-bg: rgba(
   theme-color("primary"),
   0.5
@@ -599,6 +596,7 @@ h5 {
 .custom_form .item_custom .cnt_row1 .col2 .value .form-inline .custom-select {
   background: none;
   pointer-events: none;
+  padding: 8px 8px;
 }
 .custom_form .item_custom .cnt_row1 .col2 .description-cont {
   grid-area: description-cont;
