@@ -4,7 +4,10 @@
 
   .grid-table-slst {
     display: grid;
-    grid-template-columns: repeat(5, 1fr) auto;
+    grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
+        2,
+        auto
+      );
     grid-gap: 2px;
     margin: 0 0 50px;
 
@@ -12,6 +15,8 @@
       background-color: $primary;
       padding: 8px;
       color: $white;
+      position: sticky;
+      top: 62px;
     }
 
     .item-hmxw {
@@ -20,20 +25,39 @@
     }
     .data-item {
       color: $primary;
+      font-size: 13px;
       @include apply-opacity($primary, 10);
       padding: 8px;
+      white-space: normal;
+
       .menubar {
         width: 24px;
       }
-      .title {
-        float: left;
+      .title_year {
         padding-right: 8px;
-      }
-      .upload_date {
-        clear: both;
+        .title_c {
+          width: auto;
+          max-width: 300px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-weight: bold;
+          float: left;
+        }
+
+        .year_c {
+          float: left;
+          font-weight: 300;
+          padding-left: 8px;
+        }
       }
       .description {
         clear: both;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
       }
     }
   }

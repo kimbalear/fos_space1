@@ -1635,7 +1635,7 @@ h5 {
 }
 .slst_body .grid-table-slst {
   display: grid;
-  grid-template-columns: repeat(5, 1fr) auto;
+  grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(2, auto);
   grid-gap: 2px;
   margin: 0 0 50px;
 }
@@ -1643,6 +1643,8 @@ h5 {
   background-color: #5c3873;
   padding: 8px;
   color: #fff;
+  position: sticky;
+  top: 62px;
 }
 .slst_body .grid-table-slst .item-hmxw {
   background-color: transparent;
@@ -1650,21 +1652,38 @@ h5 {
 }
 .slst_body .grid-table-slst .data-item {
   color: #5c3873;
+  font-size: 13px;
   background-color: rgba(92, 56, 115, 0.1);
   padding: 8px;
+  white-space: normal;
 }
 .slst_body .grid-table-slst .data-item .menubar {
   width: 24px;
 }
-.slst_body .grid-table-slst .data-item .title {
-  float: left;
+.slst_body .grid-table-slst .data-item .title_year {
   padding-right: 8px;
 }
-.slst_body .grid-table-slst .data-item .upload_date {
-  clear: both;
+.slst_body .grid-table-slst .data-item .title_year .title_c {
+  width: auto;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  float: left;
+}
+.slst_body .grid-table-slst .data-item .title_year .year_c {
+  float: left;
+  font-weight: 300;
+  padding-left: 8px;
 }
 .slst_body .grid-table-slst .data-item .description {
   clear: both;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
 }
 
 .navbar.fixed-top {
