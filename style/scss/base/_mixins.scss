@@ -308,7 +308,7 @@
   grid-template-areas:
     "label"
     "data-cnt";
-  @include apply-opacity($primary, 10);
+  background-color: $gray-200;
   border-radius: 6px;
   padding: 8px;
 
