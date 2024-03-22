@@ -1132,6 +1132,10 @@ h5 {
 .custom_form .item_custom .cnt_row8 .value .value-rws .value-link .form-inline table tbody td input {
   width: 100%;
 }
+.custom_form .item_custom .cnt_row8 .value .value-rws .value-link .form-inline table tbody th .icon,
+.custom_form .item_custom .cnt_row8 .value .value-rws .value-link .form-inline table tbody td .icon {
+  float: left;
+}
 .custom_form .item_custom .cnt_row8 .value .value-rws .value-link .form-inline table tbody tr td:first-child {
   width: 140px;
   font-size: 14px;
