@@ -154,6 +154,26 @@ require(["jquery"], function ($) {
   }
   
 
+  // - list view
+    var maxChars = 100;
+    var maxWords = 100;
+
+    $('.mx-chr').each(function() {
+        var text = $(this).text();
+        if (text.length > maxChars) {
+            var newText = text.substr(0, maxChars) + '...';
+            $(this).text(newText);
+        }
+    });
+  
+      $('.mx-wrd').each(function() {
+          var text = $(this).text();
+          var words = text.split(' ');
+          if (words.length > maxWords) {
+              var newText = words.slice(0, maxWords).join(' ') + '...';
+              $(this).text(newText);
+          }
+      });
 
   });
 });
