@@ -2,9 +2,14 @@
   width: auto;
   height: auto;
 
-  .grid-table-slst {
+  .table-card-slst {
     //todo
-    /*
+    display: grid;
+      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
+          2,
+          auto
+        );
+/*
     @include respond-to("small-phone") {
       display: grid;
       grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
@@ -16,20 +21,34 @@
 
     @include respond-to("phone") {
       display: grid;
-      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-          2,
-          auto
-        );
+      grid-template-columns: 1fr;
+      .header_item {
+        display: none;
+      }
       background-color: rgba(242, 245, 50, 0.164);
     }
-
+//todo
     @include respond-to("tablet") {
       display: grid;
-      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-          2,
-          auto
-        );
+      grid-auto-columns: auto;
+      grid-auto-rows: auto;
+      grid-template-columns: 1fr 48px;
+      grid-template-rows: 48px auto;
+      gap: 0px 0px;
+      grid-template-areas:
+        "crd_clps crd_cta"
+        "crd_expnd crd_expnd";
       background-color: rgba(60, 255, 0, 0.178);
+
+      .crd_clps {
+        grid-area: crd_clps;
+      }
+      .crd_cta {
+        grid-area: crd_cta;
+      }
+      .crd_expnd {
+        grid-area: crd_expnd;
+      }
     }
 
     @include respond-to("other") {
@@ -58,7 +77,7 @@
         );
       background-color: rgba(255, 0, 0, 0.11);
     }
-    */
+*/
     //todo
     grid-gap: 2px;
     margin: 0 0 50px;
@@ -103,7 +122,6 @@
           grid-area: Year;
           font-weight: 300;
         }
-
       }
 
       .desription {
