@@ -2,122 +2,196 @@
   width: auto;
   height: auto;
 
-  .table-card-slst {
-    //todo
-    display: grid;
-      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-          2,
-          auto
-        );
-/*
-    @include respond-to("small-phone") {
-      display: grid;
-      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-          2,
-          auto
-        );
-      background-color: rgba(255, 0, 0, 0.151);
+  @include respond-to("small-phone") {
+    .table_card_slst {
+      display: none;
     }
+    background-color: rgba(255, 0, 0, 0.151);
+  }
 
-    @include respond-to("phone") {
+  @include respond-to("phone") {
+    .table_card_slst {
+      display: none;
+    }
+    background-color: rgba(242, 245, 50, 0.164);
+  }
+
+  @include respond-to("tablet") {
+    .table_card_slst {
+      display: none;
+    }
+    background-color: rgba(60, 255, 0, 0.178);
+  }
+
+  @include respond-to("other") {
+    .table_card_slst {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns:
+        repeat(2, auto) minmax(100px, 390px) 1fr minmax(100px, 150px)
+        auto;
+      grid-gap: 2px;
+      margin: 0 0 50px;
+
       .header_item {
-        display: none;
-      }
-      background-color: rgba(242, 245, 50, 0.164);
-    }
-//todo
-    @include respond-to("tablet") {
-      display: grid;
-      grid-auto-columns: auto;
-      grid-auto-rows: auto;
-      grid-template-columns: 1fr 48px;
-      grid-template-rows: 48px auto;
-      gap: 0px 0px;
-      grid-template-areas:
-        "crd_clps crd_cta"
-        "crd_expnd crd_expnd";
-      background-color: rgba(60, 255, 0, 0.178);
-
-      .crd_clps {
-        grid-area: crd_clps;
-      }
-      .crd_cta {
-        grid-area: crd_cta;
-      }
-      .crd_expnd {
-        grid-area: crd_expnd;
-      }
-    }
-
-    @include respond-to("other") {
-      display: grid;
-      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-          2,
-          auto
-        );
-      background-color: rgba(4, 0, 255, 0.158);
-    }
-
-    @include respond-to("large-desktop") {
-      display: grid;
-      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-          2,
-          auto
-        );
-      background-color: rgba(255, 0, 242, 0.151);
-    }
-
-    @include respond-to("custom", 1301px) {
-      display: grid;
-      grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-          2,
-          auto
-        );
-      background-color: rgba(255, 0, 0, 0.11);
-    }
-*/
-    //todo
-    grid-gap: 2px;
-    margin: 0 0 50px;
-
-    .header_item {
-      background-color: $primary;
-      padding: 8px;
-      color: $white;
-      position: sticky;
-      top: 61px;
-    }
-
-    .data-item {
-      color: $primary;
-      font-size: 13px;
-      @include apply-opacity($primary, 10);
-      padding: 8px;
-      white-space: normal;
-
-      .menubar {
-        width: 24px;
+        background-color: $primary;
+        padding: 8px;
+        color: $white;
+        position: sticky;
+        top: 61px;
       }
 
-      .title_year {
+      .data-item {
+        color: $primary;
+        font-size: 13px;
+        @include apply-opacity($primary, 10);
+        padding: 8px;
+        white-space: normal;
 
-        span {
-          font-weight: 300;
+        .menubar {
+          width: 24px;
+        }
+
+        .title_year {
+          span {
+            font-weight: 300;
+          }
+        }
+
+        .desription {
+          clear: both;
+          width: 100%;
+          height: auto;
         }
       }
 
-      .desription {
-        clear: both;
-        width: 100%;
-        height: auto;
+      .item-hmxw {
+        background-color: transparent !important;
+        width: max-content;
       }
     }
+    background-color: rgba(4, 0, 255, 0.158);
+  }
 
-    .item-hmxw {
-      background-color: transparent !important;
-      width: max-content;
+  @include respond-to("large-desktop") {
+    .table_card_slst {
+      display: grid;
+      grid-template-columns:
+        repeat(2, auto) minmax(100px, 390px) 1fr minmax(100px, 150px)
+        auto;
+      grid-gap: 2px;
+      margin: 0 0 50px;
+
+      .header_item {
+        background-color: $primary;
+        padding: 8px;
+        color: $white;
+        position: sticky;
+        top: 61px;
+      }
+
+      .data-item {
+        color: $primary;
+        font-size: 13px;
+        @include apply-opacity($primary, 10);
+        padding: 8px;
+        white-space: normal;
+
+        .menubar {
+          width: 24px;
+        }
+
+        .title_year {
+          span {
+            font-weight: 300;
+          }
+        }
+
+        .desription {
+          clear: both;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .item-hmxw {
+        background-color: transparent !important;
+        width: max-content;
+      }
     }
+    background-color: rgba(255, 0, 242, 0.151);
+  }
+
+  @include respond-to("custom", 1301px) {
+    .table_card_slst {
+      display: grid;
+      grid-template-columns:
+        repeat(2, auto) minmax(100px, 390px) 1fr minmax(100px, 150px)
+        auto;
+      grid-gap: 2px;
+      margin: 0 0 50px;
+
+      .header_item {
+        background-color: $primary;
+        padding: 8px;
+        color: $white;
+        position: sticky;
+        top: 61px;
+      }
+
+      .data-item {
+        color: $primary;
+        font-size: 13px;
+        @include apply-opacity($primary, 10);
+        padding: 8px;
+        white-space: normal;
+
+        .menubar {
+          width: 24px;
+        }
+
+        .title_year {
+          span {
+            font-weight: 300;
+          }
+        }
+
+        .desription {
+          clear: both;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .item-hmxw {
+        background-color: transparent !important;
+        width: max-content;
+      }
+    }
+    background-color: rgba(255, 0, 0, 0.11);
+  }
+}
+
+.table_card_slst {
+  display: grid;
+  grid-template-columns: 1fr 48px;
+  grid-template-rows: 48px auto;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "crd_clps crd_cta"
+    "crd_expnd crd_expnd";
+
+  .crd_clps {
+    grid-area: crd_clps;
+  }
+
+  .crd_cta {
+    grid-area: crd_cta;
+  }
+
+  .crd_expnd {
+    grid-area: crd_expnd;
   }
 }

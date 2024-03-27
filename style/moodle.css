@@ -1638,110 +1638,175 @@ h5 {
 .slst_body {
   width: auto;
   height: auto;
-}
-.slst_body .table-card-slst {
-  display: grid;
-  grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(2, auto);
   /*
-      @include respond-to("small-phone") {
-        display: grid;
-        grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-            2,
-            auto
-          );
-        background-color: rgba(255, 0, 0, 0.151);
-      }
+  } @else if $breakpoint == "desktop" {
+    @media (min-width: 1200px) and (max-width: 1279px) {
+      @content;
+    }*/
+}
+@media (max-width: 479px) {
+  .slst_body {
+    background-color: rgba(255, 0, 0, 0.151);
+  }
+  .slst_body .table_card_slst {
+    display: none;
+  }
+}
+@media (min-width: 480px) and (max-width: 683px) {
+  .slst_body {
+    background-color: rgba(242, 245, 50, 0.164);
+  }
+  .slst_body .table_card_slst {
+    display: none;
+  }
+}
+@media (min-width: 684px) and (max-width: 820px) {
+  .slst_body {
+    background-color: rgba(60, 255, 0, 0.178);
+  }
+  .slst_body .table_card_slst {
+    display: none;
+  }
+}
+@media (min-width: 821px) and (max-width: 1278px) {
+  .slst_body {
+    background-color: rgba(4, 0, 255, 0.158);
+  }
+  .slst_body .table_card_slst {
+    display: grid;
+    grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr minmax(100px, 150px) auto;
+    grid-gap: 2px;
+    margin: 0 0 50px;
+  }
+  .slst_body .table_card_slst .header_item {
+    background-color: #5c3873;
+    padding: 8px;
+    color: #fff;
+    position: sticky;
+    top: 61px;
+  }
+  .slst_body .table_card_slst .data-item {
+    color: #5c3873;
+    font-size: 13px;
+    background-color: rgba(92, 56, 115, 0.1);
+    padding: 8px;
+    white-space: normal;
+  }
+  .slst_body .table_card_slst .data-item .menubar {
+    width: 24px;
+  }
+  .slst_body .table_card_slst .data-item .title_year span {
+    font-weight: 300;
+  }
+  .slst_body .table_card_slst .data-item .desription {
+    clear: both;
+    width: 100%;
+    height: auto;
+  }
+  .slst_body .table_card_slst .item-hmxw {
+    background-color: transparent !important;
+    width: max-content;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1653px) {
+  .slst_body {
+    background-color: rgba(255, 0, 242, 0.151);
+  }
+  .slst_body .table_card_slst {
+    display: grid;
+    grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr minmax(100px, 150px) auto;
+    grid-gap: 2px;
+    margin: 0 0 50px;
+  }
+  .slst_body .table_card_slst .header_item {
+    background-color: #5c3873;
+    padding: 8px;
+    color: #fff;
+    position: sticky;
+    top: 61px;
+  }
+  .slst_body .table_card_slst .data-item {
+    color: #5c3873;
+    font-size: 13px;
+    background-color: rgba(92, 56, 115, 0.1);
+    padding: 8px;
+    white-space: normal;
+  }
+  .slst_body .table_card_slst .data-item .menubar {
+    width: 24px;
+  }
+  .slst_body .table_card_slst .data-item .title_year span {
+    font-weight: 300;
+  }
+  .slst_body .table_card_slst .data-item .desription {
+    clear: both;
+    width: 100%;
+    height: auto;
+  }
+  .slst_body .table_card_slst .item-hmxw {
+    background-color: transparent !important;
+    width: max-content;
+  }
+}
+@media (min-width: 1301px) {
+  .slst_body {
+    background-color: rgba(255, 0, 0, 0.11);
+  }
+  .slst_body .table_card_slst {
+    display: grid;
+    grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr minmax(100px, 150px) auto;
+    grid-gap: 2px;
+    margin: 0 0 50px;
+  }
+  .slst_body .table_card_slst .header_item {
+    background-color: #5c3873;
+    padding: 8px;
+    color: #fff;
+    position: sticky;
+    top: 61px;
+  }
+  .slst_body .table_card_slst .data-item {
+    color: #5c3873;
+    font-size: 13px;
+    background-color: rgba(92, 56, 115, 0.1);
+    padding: 8px;
+    white-space: normal;
+  }
+  .slst_body .table_card_slst .data-item .menubar {
+    width: 24px;
+  }
+  .slst_body .table_card_slst .data-item .title_year span {
+    font-weight: 300;
+  }
+  .slst_body .table_card_slst .data-item .desription {
+    clear: both;
+    width: 100%;
+    height: auto;
+  }
+  .slst_body .table_card_slst .item-hmxw {
+    background-color: transparent !important;
+    width: max-content;
+  }
+}
 
-      @include respond-to("phone") {
-        display: grid;
-        grid-template-columns: 1fr;
-        .header_item {
-          display: none;
-        }
-        background-color: rgba(242, 245, 50, 0.164);
-      }
-  //todo
-      @include respond-to("tablet") {
-        display: grid;
-        grid-auto-columns: auto;
-        grid-auto-rows: auto;
-        grid-template-columns: 1fr 48px;
-        grid-template-rows: 48px auto;
-        gap: 0px 0px;
-        grid-template-areas:
-          "crd_clps crd_cta"
-          "crd_expnd crd_expnd";
-        background-color: rgba(60, 255, 0, 0.178);
-
-        .crd_clps {
-          grid-area: crd_clps;
-        }
-        .crd_cta {
-          grid-area: crd_cta;
-        }
-        .crd_expnd {
-          grid-area: crd_expnd;
-        }
-      }
-
-      @include respond-to("other") {
-        display: grid;
-        grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-            2,
-            auto
-          );
-        background-color: rgba(4, 0, 255, 0.158);
-      }
-
-      @include respond-to("large-desktop") {
-        display: grid;
-        grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-            2,
-            auto
-          );
-        background-color: rgba(255, 0, 242, 0.151);
-      }
-
-      @include respond-to("custom", 1301px) {
-        display: grid;
-        grid-template-columns: repeat(2, auto) minmax(100px, 390px) 1fr repeat(
-            2,
-            auto
-          );
-        background-color: rgba(255, 0, 0, 0.11);
-      }
-  */
-  grid-gap: 2px;
-  margin: 0 0 50px;
+.table_card_slst {
+  display: grid;
+  grid-template-columns: 1fr 48px;
+  grid-template-rows: 48px auto;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "crd_clps crd_cta" "crd_expnd crd_expnd";
 }
-.slst_body .table-card-slst .header_item {
-  background-color: #5c3873;
-  padding: 8px;
-  color: #fff;
-  position: sticky;
-  top: 61px;
+.table_card_slst .crd_clps {
+  grid-area: crd_clps;
 }
-.slst_body .table-card-slst .data-item {
-  color: #5c3873;
-  font-size: 13px;
-  background-color: rgba(92, 56, 115, 0.1);
-  padding: 8px;
-  white-space: normal;
+.table_card_slst .crd_cta {
+  grid-area: crd_cta;
 }
-.slst_body .table-card-slst .data-item .menubar {
-  width: 24px;
-}
-.slst_body .table-card-slst .data-item .title_year span {
-  font-weight: 300;
-}
-.slst_body .table-card-slst .data-item .desription {
-  clear: both;
-  width: 100%;
-  height: auto;
-}
-.slst_body .table-card-slst .item-hmxw {
-  background-color: transparent !important;
-  width: max-content;
+.table_card_slst .crd_expnd {
+  grid-area: crd_expnd;
 }
 
 .navbar.fixed-top {
