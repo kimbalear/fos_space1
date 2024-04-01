@@ -114,7 +114,7 @@ if (isloggedin() && !isguestuser()) {
             'slider1' => $OUTPUT->image_url('slider/slider1', 'theme_fos_space1'),
             'slider2' => $OUTPUT->image_url('slider/slider2', 'theme_fos_space1'),
             'slider3' => $OUTPUT->image_url('slider/slider3', 'theme_fos_space1'),
-            'i-FF' => $OUTPUT->image_url('icons/ff', 'theme_fos_space1'),
+            'i-FF' => $OUTPUT->image_url('icons/fa', 'theme_fos_space1'),
             'i-FA' => $OUTPUT->image_url('icons/fa', 'theme_fos_space1'),
             'i-SE' => $OUTPUT->image_url('icons/se', 'theme_fos_space1'),
             'i-CEBA' => $OUTPUT->image_url('icons/ceba', 'theme_fos_space1'),
