@@ -6048,7 +6048,6 @@ a.ygtvspacer:hover {
   font-size: 13px;
   background-color: #f3eff5;
   padding-bottom: 16px;
-  border: 1px solid #5c3873;
 }
 .boxaligncenter tbody tr:first-child {
   height: 0px !important;
@@ -6139,12 +6138,22 @@ a.ygtvspacer:hover {
   align-content: left;
   background-color: #f3eff5;
 }
+.boxaligncenter tbody tr td .advancesearch .col2 .item5 .template-token .form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  width: 60%;
+  align-items: center;
+  gap: 5px 5px;
+}
 .boxaligncenter tbody tr td .advancesearch .col2 .item5 .template-token .form-inline select {
   margin-right: 4px;
 }
 .boxaligncenter tbody tr td .btn {
   margin: 0 8px;
   float: right;
+}
+.boxaligncenter tbody tr td .btn .btn-primary {
+  margin-right: 36px !important;
 }
 
 .layout.fullscreen {
