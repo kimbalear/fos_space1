@@ -89,12 +89,13 @@
             }
           }
         }
+ 
         .btn {
-          /*margin: 0 8px;*/
+          margin: 0 8px;
           float: right;
-          .btn-primary.mr-1  {
-            margin-right: 36px !important;
         }
+          .btn-primary{
+            margin-right: 36px !important;
         }
       }
     }
