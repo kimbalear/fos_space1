@@ -6043,12 +6043,11 @@ a.ygtvspacer:hover {
 
 .boxaligncenter {
   width: 83% !important;
-  display: grid;
+  display: inline;
 }
 .boxaligncenter tbody {
   color: #5c3873;
   font-size: 13px;
-  background-color: rgba(92, 56, 115, 0.1);
   background-color: rgba(92, 56, 115, 0.1);
   padding-bottom: 16px;
 }
