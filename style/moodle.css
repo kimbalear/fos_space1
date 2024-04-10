@@ -6365,6 +6365,8 @@ body #page-wrapper #page #page-content {
 }
 body #page-wrapper #page .main-inner {
   background-color: #f3eff5;
+  padding: 0 0.5rem 1.5rem !important;
+  max-width: 1320px !important;
 }
 body #page-wrapper #page #region-main {
   background-color: #f3eff5;
