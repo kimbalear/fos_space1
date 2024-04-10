@@ -6362,6 +6362,7 @@ body #page-wrapper #page {
 }
 body #page-wrapper #page #page-content {
   background-color: #f3eff5;
+  margin-top: 60px;
 }
 body #page-wrapper #page .main-inner {
   background-color: #f3eff5;
@@ -6434,10 +6435,6 @@ body #page-wrapper #page #region-main {
 .main-inner {
   padding: 0 0.5rem 1.5rem !important;
   max-width: 1320px !important;
-}
-
-#page.drawers {
-  margin-top: 38px !important;
 }
 
 .dropdown a {

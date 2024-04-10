@@ -207,8 +207,10 @@ body {
   background-color: $FOS-Aubergine-bk;
   #page-wrapper #page {
     background-color: $FOS-Aubergine-bk;
+    
     #page-content {
       background-color: $body-bg;
+      margin-top: 60px;
     }
 
     .main-inner {
@@ -293,9 +295,6 @@ body {
   max-width: 1320px !important;
 }
 
-#page.drawers {
-  margin-top: 38px !important;
-}
 
 .dropdown {
   a {
