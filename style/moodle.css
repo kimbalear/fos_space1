@@ -436,7 +436,7 @@ h5 {
 .grid-category .cta-btns {
   grid-area: cta-btns;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-auto-columns: 1fr;
   gap: 0px 32px;
@@ -446,12 +446,17 @@ h5 {
   justify-items: stretch;
   align-items: stretch;
   margin: 10px 0;
-  grid-template-areas: "cta-left cta-right";
+  grid-template-areas: "cta-left cta-middle cta-right";
 }
 .grid-category .cta-btns .cta-left {
   justify-self: end;
   align-self: center;
   grid-area: cta-left;
+}
+.grid-category .cta-btns .cta-middle {
+  justify-self: center;
+  align-self: center;
+  grid-area: cta-middle;
 }
 .grid-category .cta-btns .cta-right {
   justify-self: start;
@@ -551,7 +556,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row1 .col2 {
   display: grid;
@@ -609,7 +614,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row2 {
   display: grid;
@@ -683,7 +688,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row3 {
   display: grid;
@@ -737,7 +742,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row4 {
   display: grid;
@@ -791,7 +796,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row5 {
   display: grid;
@@ -855,7 +860,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row5 .col2 {
   display: grid;
@@ -909,7 +914,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row6 {
   display: grid;
@@ -991,7 +996,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row7 {
   display: grid;
@@ -1066,7 +1071,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
 }
 .custom_form .item_custom .cnt_row8 {
   display: grid;
@@ -1299,7 +1304,7 @@ h5 {
   border-radius: 0.25rem;
   padding: 4px 8px;
   background-color: #DDD3E1;
-  color: #5c3873;
+  color: #333;
   margin: 0 0 4px;
 }
 
@@ -1326,7 +1331,7 @@ h5 {
 .svw-body .svw-cstm_frm .item_custom .cnt_row1 {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr minmax(140px, auto);
   gap: 0px 4px;
 }
 .svw-body .svw-cstm_frm .item_custom .cnt_row1 .col1 {
@@ -1467,7 +1472,7 @@ h5 {
 .svw-body .svw-cstm_frm .item_custom .cnt_row5 {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr minmax(140px, auto);
   gap: 0px 4px;
   justify-content: stretch;
   align-content: stretch;
@@ -6367,6 +6372,14 @@ body #page-wrapper #page .main-inner {
   background-color: #f3eff5;
   padding: 0 0.5rem 1.5rem !important;
   max-width: 1320px !important;
+}
+body #page-wrapper #page .main-inner .header-maxwidth {
+  max-width: 100%;
+}
+body #page-wrapper #page div.grid-category {
+  padding: 0 0.5rem 1.5rem !important;
+  max-width: 1320px !important;
+  width: 100%;
 }
 body #page-wrapper #page #region-main {
   background-color: #f3eff5;
