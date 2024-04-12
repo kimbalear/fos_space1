@@ -187,7 +187,26 @@ require(["jquery"], function ($) {
 
     $('#miCampo').prop('readonly', true);
 
+// remove space on title and author field
+var inputadvacedsearch = $(".input-advancedsearch input");
+    console.log(inputadvacedsearch);
 
+    if (inputadvacedsearch.length > 0) {
+        var inputtitle = inputadvacedsearch.eq(0);
+        var inputauthor = inputadvacedsearch.eq(1);
+
+        inputtitle.on('focusout', removespaceAdvancesearch);
+        inputauthor.on('focusout', removespaceAdvancesearch);
+
+        function removespaceAdvancesearch(event) {
+            // Obtén el valor del campo de entrada
+            var inputValue = $(event.target).val();
+            // Elimina los espacios en blanco al inicio y al final
+            var trimmedValue = $.trim(inputValue);
+            // Asigna el valor corregido al campo de entrada
+            $(event.target).val(trimmedValue);
+        }
+    }
     // - list view
     var maxChars = 100;
     var maxWords = 30;
@@ -199,6 +218,7 @@ require(["jquery"], function ($) {
         $(this).text(newText);
       }
     });
+
 
     $('.mx-wrd').each(function () {
       var text = $(this).text();

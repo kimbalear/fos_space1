@@ -445,8 +445,9 @@ h5 {
   align-content: stretch;
   justify-items: stretch;
   align-items: stretch;
-  margin: 10px 0;
+  margin: 10px auto;
   grid-template-areas: "cta-left cta-middle cta-right";
+  width: fit-content;
 }
 .grid-category .cta-btns .cta-left {
   justify-self: end;
@@ -6182,11 +6183,6 @@ a.ygtvspacer:hover {
   max-width: 1281px !important;
 }
 */
-.footer-popover {
-  max-width: 1281px !important;
-  margin: 0 auto !important;
-}
-
 .pw-custom {
   background-color: #f3eff5 !important;
 }
@@ -6364,6 +6360,7 @@ body {
 }
 body #page-wrapper #page {
   background-color: #f3eff5;
+  min-height: auto;
 }
 body #page-wrapper #page #page-content {
   background-color: #f3eff5;
@@ -6372,9 +6369,13 @@ body #page-wrapper #page .main-inner {
   background-color: #f3eff5;
   padding: 0 0.5rem 1.5rem !important;
   max-width: 1320px !important;
+  margin-top: 0;
+  min-height: 86vh;
+  margin-bottom: 0;
 }
 body #page-wrapper #page .main-inner .header-maxwidth {
   max-width: 100%;
+  margin-top: 1.5rem;
 }
 body #page-wrapper #page div.grid-category {
   padding: 0 0.5rem 1.5rem !important;
@@ -6442,11 +6443,6 @@ body #page-wrapper #page #region-main {
   height: 194px;
   margin: 0 4px;
   background-color: #eb66a2;
-}
-
-.main-inner {
-  padding: 0 0.5rem 1.5rem !important;
-  max-width: 1320px !important;
 }
 
 .dropdown a {
