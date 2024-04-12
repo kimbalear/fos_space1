@@ -6358,9 +6358,12 @@ body {
   font-family: "Isidora Sans Regular", sans-serif;
   background-color: #f3eff5;
 }
+body #page-wrapper {
+  min-height: auto;
+}
 body #page-wrapper #page {
   background-color: #f3eff5;
-  min-height: auto;
+  min-height: fit-content;
 }
 body #page-wrapper #page #page-content {
   background-color: #f3eff5;
