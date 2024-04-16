@@ -68,6 +68,7 @@ require(["jquery"], function ($) {
               $("#scroll").fadeOut();
           }
       });
+
       $("#scroll").click(function () {
           $("html, body").animate({scrollTop: 0}, 600);
           return false;
@@ -85,6 +86,25 @@ require(["jquery"], function ($) {
               description.show();
               $(this).find("div").removeClass("down").addClass("up");
           }
+      });
+
+      var hidden = true;
+
+      $("#expertmode").click(function() {
+          if(hidden){
+              $('[hidden]').removeAttr('hidden');
+              hidden=false;
+          }else{
+              $(".lockTranslation").attr('hidden', true);
+              $("#titleES").attr('hidden', true);
+              $("#titleFR").attr('hidden', true);
+              $("#titlePT").attr('hidden', true);
+              $("#descES").attr('hidden', true);
+              $("#descFR").attr('hidden', true);
+              $("#descPT").attr('hidden', true);
+              hidden=true;
+          }
+
       });
 
       //AUTOMATIC TRANSLATION OF TEXT
