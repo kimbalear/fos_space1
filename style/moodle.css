@@ -6391,6 +6391,7 @@ body {
   background-color: #f3eff5;
 }
 body #page-wrapper {
+  display: inline;
   min-height: auto;
 }
 body #page-wrapper #page {
@@ -6488,13 +6489,20 @@ body #page-wrapper #page #region-main {
 /*Grade view table*/
 .path-grade-report-grader .gradeparent {
   overflow: auto;
+  margin-bottom: 2vh;
 }
-.path-grade-report-grader .gradeparent .path-grade-report-grader .gradeparent th.header {
+.path-grade-report-grader .gradeparent th.header {
   position: relative;
 }
 
 table#user-grades {
   display: inline;
+}
+
+.hasstickyfooter .stickyfooter {
+  position: relative;
+  bottom: 0;
+  height: auto;
 }
 
 /*# sourceMappingURL=moodle.css.map */

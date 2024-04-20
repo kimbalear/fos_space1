@@ -206,6 +206,7 @@ body {
   @include font-body("Isidora Sans Regular");
   background-color: $FOS-Aubergine-bk;
   #page-wrapper {
+  display: inline;  
   min-height: auto;
   #page {
     background-color: $FOS-Aubergine-bk;
@@ -315,11 +316,18 @@ body {
 /*Grade view table*/
 .path-grade-report-grader .gradeparent {
   overflow: auto;
-  .path-grade-report-grader .gradeparent th.header {
+  margin-bottom: 2vh;
+  th.header {
     position: relative;
 }
 }
 
 table#user-grades{
   display: inline;
+}
+
+.hasstickyfooter .stickyfooter {
+  position: relative;
+  bottom: 0;
+  height: auto;
 }
