@@ -354,7 +354,7 @@ require(["jquery"], function ($) {
       $('#miCampo').prop('readonly', true);
 
 
-      // - list view
+      //list view
       var maxChars = 100;
       var maxWords = 30;
 
@@ -374,5 +374,13 @@ require(["jquery"], function ($) {
               $(this).text(newText);
           }
       });
-  });
+  
+      //block event on data entry view
+        $('input[type=text]').on('keypress', function(e) {
+            if (e.which === 13) {
+                e.preventDefault();
+            }
+        });
+  
+    });
 });

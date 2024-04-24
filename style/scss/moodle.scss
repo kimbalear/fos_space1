@@ -211,6 +211,7 @@ body {
   #page {
     background-color: $FOS-Aubergine-bk;
     min-height: fit-content;
+    margin-bottom: 0;
     #page-content {
       background-color: $body-bg;
     }
@@ -320,6 +321,9 @@ body {
   th.header {
     position: relative;
 }
+tr.avg.r0.lastrow.pinned {
+  position: static;
+}
 }
 
 table#user-grades{
@@ -327,7 +331,86 @@ table#user-grades{
 }
 
 .hasstickyfooter .stickyfooter {
-  position: relative;
+  position: static;
   bottom: 0;
   height: auto;
+  margin-top: 1.5vh;
 }
+
+ /*report view  table
+table#outlinetable {
+  display: block;
+  .c0{
+    padding: .75rem;
+    vertical-align: middle;
+    line-height: 2;
+  }
+  .c1{
+    padding: .75rem;
+    vertical-align: middle;
+    line-height: 2;
+  }
+  .c2{
+    padding: .75rem;
+    vertical-align: middle;
+    line-height: 2;
+  }
+  .c3{
+    padding: .75rem;
+    vertical-align: middle;
+    line-height: 2;
+  }
+}*/
+
+/*h5p report
+.boxaligncenter.boxwidthwide {
+  display: inline-table;
+  max-width: auto;
+
+  .c0 {
+    padding: .75rem;
+    vertical-align: middle;
+    line-height: 2;
+}  .c1 {
+  padding: .75rem;
+  vertical-align: middle;
+  line-height: 2;
+}  .c2 {
+  padding: .75rem;
+  vertical-align: middle;
+  line-height: 2;
+}  .c3 {
+  padding: .75rem;
+  vertical-align: middle;
+  line-height: 2;
+}
+}*/
+
+/* add entry button*/
+div#sticky-footer {
+  position: sticky;
+}
+
+/* sucription - foro
+table#subscribers-table {
+  display: inline-table;
+  max-width: auto;
+
+  .c0 {
+    padding: .75rem;
+    vertical-align: middle;
+    line-height: 2;
+}  .c1 {
+  padding: .75rem;
+  vertical-align: middle;
+  line-height: 2;
+}  .c2 {
+  padding: .75rem;
+  vertical-align: middle;
+  line-height: 2;
+}  .c3 {
+  padding: .75rem;
+  vertical-align: middle;
+  line-height: 2;
+}
+}*/
