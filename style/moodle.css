@@ -6414,6 +6414,9 @@ body {
   font-family: "Isidora Sans Regular", sans-serif;
   background-color: #f3eff5;
 }
+body #page-admin-index {
+  height: fit-content;
+}
 body #page-wrapper {
   display: inline;
   min-height: auto;
