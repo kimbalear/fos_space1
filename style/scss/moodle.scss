@@ -135,9 +135,10 @@ table {
   }
   .dropdown-item.active {
     background-color: $primary;
+    color: #fff;
   }
 }
-//------
+
 .btn-primary.disabled,
 .btn-primary:disabled {
   background-color: $primary;
@@ -183,7 +184,7 @@ table {
       &:hover {
         background-color: #ddd3e1;
         a {
-          color: #5c3873 !important;
+          color: #5c3873 ;
         }
       }
     }
@@ -194,7 +195,7 @@ table {
         &:hover {
           background-color: #ddd3e1;
           a {
-            color: #5c3873 !important;
+            color: #5c3873 ;
           }
         }
       }
@@ -205,19 +206,24 @@ table {
 body {
   @include font-body("Isidora Sans Regular");
   background-color: $FOS-Aubergine-bk;
+  #page-admin-index {
+    height: fit-content;
+}
   #page-wrapper {
+  display: inline;  
   min-height: auto;
   #page {
     background-color: $FOS-Aubergine-bk;
     min-height: fit-content;
+    margin-bottom: 0;
     #page-content {
       background-color: $body-bg;
     }
 
     .main-inner {
       background-color: $body-bg;    
-      padding: 0 0.5rem 1.5rem !important;
-      max-width: 1320px !important;
+      padding: 0 0.5rem 1.5rem;
+      max-width: 1320px;
       margin-top: 0;
       min-height: 86vh;
       margin-bottom: 0;
@@ -229,8 +235,8 @@ body {
     }
 
     div.grid-category {
-      padding: 0 .5rem 1.5rem !important;
-      max-width: 1320px !important;
+      padding: 0 .5rem 1.5rem;
+      max-width: 1320px;
       width: 100%;
   }
 
@@ -260,7 +266,7 @@ body {
 }
 
 .btn-link {
-  color: $FOS-Caribbean-Green !important;
+  color: $FOS-Caribbean-Green;
   text-decoration: none;
 
   .icon {
@@ -269,7 +275,7 @@ body {
 }
 
 .bnt-custom-exp {
-  margin-bottom: 20px !important;
+  margin-bottom: 20px;
 }
 
 .navbar-brand .logo {
@@ -305,11 +311,55 @@ body {
   }
 }
 
-
-
 .dropdown {
   a {
     color: $primary;
     text-decoration: none;
+  }
+}
+
+/*Grade view table*/
+.path-grade-report-grader .gradeparent {
+  overflow: auto;
+  margin-bottom: 2vh;
+  th.header {
+    position: relative;
+}
+tr.avg.r0.lastrow.pinned {
+  position: static;
+}
+}
+
+table#user-grades{
+  display: inline;
+}
+
+.hasstickyfooter .stickyfooter {
+  position: static;
+  bottom: 0;
+  height: auto;
+  margin-top: 1.5vh;
+}
+
+
+/* add entry button*/
+div#sticky-footer {
+  position: sticky;
+}
+
+/* add field on database activity*/
+a#action-menu-toggle-1 {
+  color: #fff;
+  background-color: $primary;
+  border: 1px solid $primary;
+  &:hover {
+    color: $primary;
+    border: 1px solid $primary;
+    background-color: #fff;
+  } 
+  &:focus {
+    color: #fff;
+    background-color: $primary;
+    border: 1px solid $primary;
   }
 }

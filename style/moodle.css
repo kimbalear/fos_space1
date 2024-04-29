@@ -63,19 +63,29 @@
 ) !default;*/
 @font-face {
   font-family: "Isidora Sans Regular";
-  src: url("fos_space1/fonts/isidora-sans/IsidoraSans-Regular.otf") format("opentype"), url("fos_space1/fonts/isidora-sans/IsidoraSans-Regular.ttf") format("truetype");
+  src: url([[font:theme|IsidoraSans-Regular.otf]]);
+  src: url([[font:theme|IsidoraSans-Regular.otf]]) format("opentype"), url([[font:theme|IsidoraSans-Regular.ttf]]) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Isidora Sans Medium";
-  src: url("fos_space1/fonts/isidora-sans/IsidoraSans-Medium.otf") format("opentype"), url("fos_space1/fonts/isidora-sans/IsidoraSans-Medium.ttf") format("truetype");
+  src: url([[font:theme|IsidoraSans-Medium.otf]]);
+  src: url([[font:theme|IsidoraSans-Medium.otf]]) format("opentype"), url([[font:theme|IsidoraSans-Medium.ttf]]) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Isidora Sans Alt-Black";
-  src: url("fos_space1/fonts/isidora-sans/IsidoraSansAlt-Black.otf") format("opentype"), url("fos_space1/fonts/isidora-sans/IsidoraSansAlt-Black.ttf") format("truetype");
+  src: url([[font:theme|IsidoraSansAlt-Black.otf]]);
+  src: url([[font:theme|IsidoraSansAlt-Black.otf]]) format("opentype"), url([[font:theme|IsidoraSansAlt-Black.ttf]]) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Isidora Sans Bold";
+  src: url([[font:theme|IsidoraSans-Bold.otf]]);
+  src: url([[font:theme|IsidoraSans-Bold.otf]]) format("opentype"), url([[font:theme|IsidoraSans-Bold.ttf]]) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -244,7 +254,6 @@ h5 {
   background-image: url('data:image/svg+xml,<svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="38" height="38" rx="19" fill="white"/><g clip-path="url(%23clip0_325_1122)"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.4617 8.5H23.4617V10.5H21.4617V16.5H20.4617V10.5H18.4617V16.5H17.4617V10.5H15.4617V8.5Z" fill="%235C3873"/><path d="M10.4616 26.5L17.4616 16.5L18.4616 10.5H20.4616L21.4616 16.5L28.4616 26.5C29.0227 28.2677 28.9146 28.9976 27.4616 29.5H11.4616C10.1663 28.7584 9.99196 28.0854 10.4616 26.5Z" fill="%235C3873"/><path d="M14.1389 22.5L18.4618 16.5V10.5H20.4618V16.5L24.4507 22.4214C23.0841 22.563 22.5076 22.0153 21.0546 22.5176C19.6514 22.8851 18.865 22.8428 17.4618 22.5176C16.1665 21.776 15.6027 22.4824 14.1389 22.5Z" fill="white"/></g><defs><clipPath id="clip0_325_1122"><rect width="18.5518" height="21" fill="white" transform="translate(10.2241 8.5)"/></clipPath></defs></svg>');
 }
 
-
 .icon-blog {
   width: 38px;
   height: 38px;
@@ -256,7 +265,7 @@ h5 {
   color: #f9f2ea;
   background-color: #383d47;
   padding: 30px 20px;
-  font-size: small;
+  font-size: medium;
 }
 .fos_space1-footer .grid-footer {
   display: grid;
@@ -266,6 +275,7 @@ h5 {
   gap: 8px 0px;
   grid-auto-flow: row;
   align-items: center;
+  /*margin-bottom: 96px;*/
   grid-template-areas: "footer_top" "footer_bottom";
 }
 .fos_space1-footer .grid-footer .footer_top {
@@ -349,8 +359,16 @@ h5 {
   width: 100% !important;
 }
 .ktt_log_page .lg_cnt div[role=main] .loginform .login-heading {
-  font-size: 1em !important;
-  font-weight: 500 !important;
+  font-size: 1.2em !important;
+  font-family: "Isidora Sans Medium", sans-serif !important;
+  color: #f06043 !important;
+}
+.ktt_log_page .lg_cnt div[role=main] .loginform a.btn.login-identityprovider-btn.btn-block {
+  border: 1px solid #5c3873;
+  background-color: #5c3873;
+  width: fit-content;
+  margin: auto auto;
+  color: white;
 }
 .ktt_log_page .lg_cnt div[role=main] .login-signup .btn-secondary {
   width: 100% !important;
@@ -436,9 +454,10 @@ h5 {
 .grid-category .img_header .grid-header_content .title {
   justify-self: center;
   align-self: center;
+  text-align: center;
   grid-area: title;
   color: #5c3873;
-  font-size: 1.8rem;
+  font-size: 2.7rem;
 }
 .grid-category .cta-btns {
   grid-area: cta-btns;
@@ -1767,6 +1786,9 @@ h5 {
 .slst_body .table-card-slst .data-item .menubar {
   width: 24px;
 }
+.slst_body .table-card-slst .data-item .title_year b {
+  font-family: "Isidora Sans Bold", sans-serif;
+}
 .slst_body .table-card-slst .data-item .title_year span {
   font-weight: 300;
 }
@@ -1835,6 +1857,7 @@ h5 {
   background-color: #DDD3E1 !important;
   align-items: stretch;
   height: 61px;
+  font-size: 1.1rem;
 }
 
 .moremenu .nav-link {
@@ -6079,29 +6102,29 @@ a.ygtvspacer:hover {
   display: none;
 }
 
-.boxaligncenter {
-  width: 83% !important;
+#data_adv_form .boxaligncenter {
+  width: 83%;
   display: inline-grid;
 }
-.boxaligncenter tbody {
+#data_adv_form .boxaligncenter tbody {
   color: #5c3873;
   font-size: 13px;
   background-color: rgba(92, 56, 115, 0.1);
   padding-bottom: 16px;
 }
-.boxaligncenter tbody tr:first-child {
-  height: 0px !important;
-  padding: 0px !important;
-  line-height: 0 !important;
+#data_adv_form .boxaligncenter tbody tr:first-child {
+  height: 0px;
+  padding: 0px;
+  line-height: 0;
 }
-.boxaligncenter tbody tr:first-child td {
+#data_adv_form .boxaligncenter tbody tr:first-child td {
   border: none;
   padding: 0;
 }
-.boxaligncenter tbody tr td {
+#data_adv_form .boxaligncenter tbody tr td {
   border: none;
 }
-.boxaligncenter tbody tr td .advancesearch {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr 1fr;
@@ -6110,32 +6133,32 @@ a.ygtvspacer:hover {
   width: auto;
   padding: 8px 16px;
 }
-.boxaligncenter tbody tr td .advancesearch .col1 {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col1 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: auto;
   gap: 10px 0;
 }
-.boxaligncenter tbody tr td .advancesearch .col1 .item1 {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col1 .item1 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: auto;
   gap: 2px;
 }
-.boxaligncenter tbody tr td .advancesearch .col1 .item1 select {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col1 .item1 select {
   width: 100%;
   border: 1px solid #5c3873;
   border-radius: 0;
   align-content: left;
   background-color: #f3eff5;
 }
-.boxaligncenter tbody tr td .advancesearch .col1 .item2 {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col1 .item2 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: auto;
   gap: 2px;
 }
-.boxaligncenter tbody tr td .advancesearch .col1 .item2 .template-token {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col1 .item2 .template-token {
   width: 100%;
   border: 1px solid #5c3873;
   border-radius: 0;
@@ -6143,57 +6166,57 @@ a.ygtvspacer:hover {
   background-color: #f3eff5;
   padding: 8px 10px;
 }
-.boxaligncenter tbody tr td .advancesearch .col2 {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: auto;
   gap: 10px 0;
   height: 65%;
 }
-.boxaligncenter tbody tr td .advancesearch .col2 .item1,
-.boxaligncenter tbody tr td .advancesearch .col2 .item4 {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item1,
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item4 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: auto;
 }
-.boxaligncenter tbody tr td .advancesearch .col2 .item1 input,
-.boxaligncenter tbody tr td .advancesearch .col2 .item4 input {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item1 input,
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item4 input {
   width: 100%;
   border: 1px solid #5c3873;
   border-radius: 0;
   align-content: left;
   background-color: #f3eff5;
 }
-.boxaligncenter tbody tr td .advancesearch .col2 .item2,
-.boxaligncenter tbody tr td .advancesearch .col2 .item3 {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item2,
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item3 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: auto;
 }
-.boxaligncenter tbody tr td .advancesearch .col2 .item2 select,
-.boxaligncenter tbody tr td .advancesearch .col2 .item3 select {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item2 select,
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item3 select {
   width: 100%;
   border: 1px solid #5c3873;
   border-radius: 0;
   align-content: left;
   background-color: #f3eff5;
 }
-.boxaligncenter tbody tr td .advancesearch .col2 .item5 .template-token .form-inline {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item5 .template-token .form-inline {
   /*display: flex;
   flex-flow: row wrap;
   width: 60%;
   align-items: center;*/
   gap: 5px 5px;
 }
-.boxaligncenter tbody tr td .advancesearch .col2 .item5 .template-token .form-inline select {
+#data_adv_form .boxaligncenter tbody tr td .advancesearch .col2 .item5 .template-token .form-inline select {
   margin-right: 4px;
 }
-.boxaligncenter tbody tr td .btn {
+#data_adv_form .boxaligncenter tbody tr td .btn {
   margin: 0 8px;
   float: right;
 }
-.boxaligncenter tbody tr td .btn-primary {
-  margin-right: 36px !important;
+#data_adv_form .boxaligncenter tbody tr td .btn-primary {
+  margin-right: 36px;
 }
 
 .layout.fullscreen {
@@ -6326,6 +6349,7 @@ table {
 }
 .dropdown-menu .dropdown-item.active {
   background-color: #5c3873;
+  color: #fff;
 }
 
 .btn-primary.disabled,
@@ -6374,7 +6398,7 @@ table {
   background-color: #ddd3e1;
 }
 .courseindex .courseindex-section .pageitem:hover a {
-  color: #5c3873 !important;
+  color: #5c3873;
 }
 .courseindex .courseindex-section .courseindex-item-content .pageitem {
   background-color: #5c3873;
@@ -6383,27 +6407,32 @@ table {
   background-color: #ddd3e1;
 }
 .courseindex .courseindex-section .courseindex-item-content .pageitem:hover a {
-  color: #5c3873 !important;
+  color: #5c3873;
 }
 
 body {
   font-family: "Isidora Sans Regular", sans-serif;
   background-color: #f3eff5;
 }
+body #page-admin-index {
+  height: fit-content;
+}
 body #page-wrapper {
+  display: inline;
   min-height: auto;
 }
 body #page-wrapper #page {
   background-color: #f3eff5;
   min-height: fit-content;
+  margin-bottom: 0;
 }
 body #page-wrapper #page #page-content {
   background-color: #f3eff5;
 }
 body #page-wrapper #page .main-inner {
   background-color: #f3eff5;
-  padding: 0 0.5rem 1.5rem !important;
-  max-width: 1320px !important;
+  padding: 0 0.5rem 1.5rem;
+  max-width: 1320px;
   margin-top: 0;
   min-height: 86vh;
   margin-bottom: 0;
@@ -6413,8 +6442,8 @@ body #page-wrapper #page .main-inner .header-maxwidth {
   margin-top: 1.5rem;
 }
 body #page-wrapper #page div.grid-category {
-  padding: 0 0.5rem 1.5rem !important;
-  max-width: 1320px !important;
+  padding: 0 0.5rem 1.5rem;
+  max-width: 1320px;
   width: 100%;
 }
 body #page-wrapper #page #region-main {
@@ -6436,7 +6465,7 @@ body #page-wrapper #page #region-main {
 }
 
 .btn-link {
-  color: #60ad8f !important;
+  color: #60ad8f;
   text-decoration: none;
 }
 .btn-link .icon {
@@ -6444,7 +6473,7 @@ body #page-wrapper #page #region-main {
 }
 
 .bnt-custom-exp {
-  margin-bottom: 20px !important;
+  margin-bottom: 20px;
 }
 
 .navbar-brand .logo {
@@ -6483,6 +6512,51 @@ body #page-wrapper #page #region-main {
 .dropdown a {
   color: #5c3873;
   text-decoration: none;
+}
+
+/*Grade view table*/
+.path-grade-report-grader .gradeparent {
+  overflow: auto;
+  margin-bottom: 2vh;
+}
+.path-grade-report-grader .gradeparent th.header {
+  position: relative;
+}
+.path-grade-report-grader .gradeparent tr.avg.r0.lastrow.pinned {
+  position: static;
+}
+
+table#user-grades {
+  display: inline;
+}
+
+.hasstickyfooter .stickyfooter {
+  position: static;
+  bottom: 0;
+  height: auto;
+  margin-top: 1.5vh;
+}
+
+/* add entry button*/
+div#sticky-footer {
+  position: sticky;
+}
+
+/* add field on database activity*/
+a#action-menu-toggle-1 {
+  color: #fff;
+  background-color: #5c3873;
+  border: 1px solid #5c3873;
+}
+a#action-menu-toggle-1:hover {
+  color: #5c3873;
+  border: 1px solid #5c3873;
+  background-color: #fff;
+}
+a#action-menu-toggle-1:focus {
+  color: #fff;
+  background-color: #5c3873;
+  border: 1px solid #5c3873;
 }
 
 /*# sourceMappingURL=moodle.css.map */

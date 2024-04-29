@@ -58,8 +58,17 @@
                 }
 
                 .login-heading {
-                    font-size: 1em !important;
-                    font-weight: 500 !important;
+                    font-size: 1.2em !important;
+                    font-family: "Isidora Sans Medium",sans-serif !important; 
+                    color: $FOS-Coral !important;
+                }
+
+                a.btn.login-identityprovider-btn.btn-block {
+                    border: 1px solid $primary;
+                    background-color: $primary;
+                    width: fit-content;
+                    margin: auto auto;
+                    color: #FFFF;
                 }
             }
 
@@ -69,6 +78,8 @@
                     margin-bottom: 16px;
                 }
             }
+
+            
 
             #guestlogin {
                 .btn {
